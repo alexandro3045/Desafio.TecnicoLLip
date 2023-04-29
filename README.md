@@ -12,14 +12,7 @@ Contato
 
 Nome: ALEXANDRO RAMOS ALVES: Desenvolvedor Fone: (21) 96981-1022 Email: alexandro_alves@yahoo.com.br
 
-Introdução
-Devido a migração dos sistemas legados para a nova plataforma dynamics, foi determinadoa criação de API de Integraçao no sistema legado.
-
-Diante disso a integragração foi criada, com a responsabilidade de alimentar o sistema legado Corporativo com informações para o sistema de informações financeiras.
-Começando, construindo e testando
-Como qualquer sistema existe uma recomendação para consumir a API via Postman. Seguindo as devidas recomendações
-
-Antes de tudo devemos baixar o Postman ou utilizar online através de plugins.
+Baixar o Postman ou utilizar online através de plugins.
 
 Link para Download: https://www.getpostman.com/downloads/ 
 
