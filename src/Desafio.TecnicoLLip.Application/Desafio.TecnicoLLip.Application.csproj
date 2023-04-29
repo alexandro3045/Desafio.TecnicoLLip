@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);CS8032;1591</NoWarn>
+	<WarningsNotAsErrors>CS8032;$(WarningsNotAsErrors)</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.5.0" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="5.8.0" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.6.0.16497">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Desafio.TecnicoLLip.Domain\Domain.Core\Desafio.TecnicoLLip.Domain.Core.csproj" />
+    <ProjectReference Include="..\Desafio.TecnicoLLip.Infrastructure.Repositorio\Desafio.TecnicoLLip.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>
