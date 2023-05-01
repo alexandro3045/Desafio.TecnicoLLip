@@ -8,48 +8,37 @@ TODO: Guide users through getting your code up and running on their own system. 
 3.	Latest releases
 4.	API references
 
-Contatos FIRJAN
-Abaixo relação dos responsáveis FIRJAN pelo desenvolvimento da API DYNAMICS.
+Contato
 
- Nome: FELIPE MENTEL AUGUSTO: ARQUITETO DE SISTEMA Fones: (21) 2587-5572 Email: fpaugusto@firjan.com.br
+Nome: ALEXANDRO RAMOS ALVES: Desenvolvedor Fone: (21) 96981-1022 Email: alexandro_alves@yahoo.com.br
 
-Nome: ALEXANDRO RAMOS ALVES: Desenvolvedor Fone: (21) 2587-5542 Email: alralves@firjan.com.br
-
-Introdução
-Devido a migração dos sistemas legados para a nova plataforma dynamics, foi determinadoa criação de API de Integraçao no sistema legado.
-
-Diante disso a integragração foi criada, com a responsabilidade de alimentar o sistema legado Corporativo com informações para o sistema Gestor de serviços e consultas de informações financeiras.
-Começando, construindo e testando
-Como qualquer sistema existe uma recomendação para consumir a API via Postman. Seguindo as devidas recomendações
-
-Antes de tudo devemos baixar o Postman ou utilizar online através de plugins.
+Baixar o Postman ou utilizar online atravÃ©s de plugins.
 
 Link para Download: https://www.getpostman.com/downloads/ 
 
-Após efetuar o download ou instalar algum plugin siga as recomendações sugeridas.
+ApÃ³s efetuar o download ou instalar algum plugin siga as recomendaÃ§Ãµes sugeridas.
 
-Preencher os campos com as seguintes informações:
+Preencher os campos com as seguintes informaÃ§Ãµes:
 
-username: TFirjan12ab
+username: xxxxxxx
 
-password: DISISRules
+password: xxxxx
 
 grant_type: password
 
-URL de geração: https://svchmgext.firjan.com.br/ 
+URL de geraÃ§Ã£o: xxxxxxxx
 
 Seguindo o exemplo em anexo...
 
-Firjan.Integracao.Dynamics\docs\img\1557324185789.png
+xxxxxxx.jpg
 
-Após a geração do token o mesmo deve ser inserido no Headers de quando for utilizar algum recurso da API:
+ApÃ³s a geraÃ§Ã£o do token o mesmo deve ser inserido no Headers de quando for utilizar algum recurso da API:
 
 Authorization: bearer TOKENGERADO
 
 como exemplificado na imagem abaixo
 
-Firjan.Integracao.Dynamics\docs\img\3557324885887.png
+xxxxxx.png
 
-Documentação dos ambientes está disponível no diretório Firjan.Integracao.Dynamics\docs
+DocumentaÃ§Ã£o dos ambientes estÃ¡ disponÃ­vel no diretÃ³rio LLip\docs
 
-Ambiente Homologação
