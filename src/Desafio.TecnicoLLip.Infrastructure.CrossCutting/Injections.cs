@@ -5,6 +5,11 @@ using Desafio.TecnicoLLip.Application.Interfaces;
 using Desafio.TecnicoLLip.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Desafio.TecnicoLLip.Domain.Services.Validations;
+using Desafio.TecnicoLLip.Domain.Services.Services;
+using Desafio.TecnicoLLip.Domain.Core.Interfaces.Services;
+using Desafio.TecnicoLLip.Domain.Core.Interfaces.Repository;
+using Desafio.TecnicoLLip.Infrastructure.Data.Repositorios.Corporativo;
 #endregion
 
 namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
@@ -15,64 +20,34 @@ namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
 
         public static void RegistrarServicos(IServiceCollection services)
         {
-            services.AddSingleton<AutoMapper.IConfigurationProvider>(AutoMapperConfig.RegisterMappings());
+            services
+                .AddSingleton<AutoMapper.IConfigurationProvider>(AutoMapperConfig.RegisterMappings());
 
-            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+            services
+                .AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             #region Add singleton
-            services.AddSingleton<ProdutoValidator>();
-            services.AddSingleton<ItemContabilProdutoValidator>();
-            services.AddSingleton<ContaContabilProdutoValidator>();
-            services.AddSingleton<ClasseValorProdutoValidator>();
-            services.AddSingleton<TussValidator>();
-            services.AddSingleton<EmpresaValidator>();
-            services.AddSingleton<EntidadeValidator>();
-            services.AddSingleton<ModuloVersaoValidator>();
-            services.AddSingleton<TipoEntidadeVinculoValidator>();
-            services.AddSingleton<TabelaServicoTipoEntidadeVinculoValidator>();
-            services.AddSingleton<ClasssificacaoValidator>();
-            services.AddSingleton<SaudeValidator>();
-            services.AddSingleton<TipoUnidadeNegocioTipoEntidadeVinculoValidator>();
-            services.AddSingleton<TipoUnidadeNegocioValidator>();
-            services.AddSingleton<EnderecoUnidadeValidator>();
-            services.AddSingleton<SaudeFiguraOdontogramaValidator>();
-            services.AddSingleton<LinhaServicoValidator>();
-            services.AddSingleton<FiguraOdontogramaValidator>();
-            services.AddSingleton<ProdutoTipoFichaValidator>();
-            services.AddSingleton<LazerValidator>();
-            services.AddSingleton<ExameValidator>();
-            services.AddSingleton<RiscoValidator>();
-            services.AddSingleton<OdontogramaValidator>();
-            services.AddSingleton<TipoFichaValidator>();
-            services.AddSingleton<FuncaoValidator>();
-            services.AddSingleton<AreaValidator>();
-            services.AddSingleton<GrupoClassificacaoValidator>();
-            services.AddSingleton<PlataformaValidator>();
-            services.AddSingleton<ClassificacaoServicoValidator>();
-            services.AddSingleton<UnidadeNegocioValidator>();
-            services.AddSingleton<CodigoMunicipalValidator>();
-            services.AddSingleton<ProdutoUnidadeNegocioValidator>();
-            services.AddSingleton<EmpresaEntidadeVinculoValidator>();
-            services.AddSingleton<CodigoMunicipalServicoCorporativoValidator>();
-            services.AddSingleton<TipoRegiaoValidator>();
-            services.AddSingleton<RegiaoUnidadeNegocioValidator>();
-            services.AddSingleton<RegiaoValidator>();
-            services.AddSingleton<Domain.Validations.Corporativo.Protheus.EmpresaValidator>();
-            services.AddSingleton<EmpresaValidator>();
-            services.AddSingleton<BairroValidator>();
+            services
+                .AddSingleton<UsersValidator>();
             #endregion
 
             #region Add Scoped AppService
-            services.AddScoped<IEmailAppService, EmailAppService>();
-            services.AddScoped<ILoginAppService, LoginAppService>();           
+            services
+                .AddScoped<IEmailAppService, EmailAppService>();
+            services
+                .AddScoped<ILoginAppService, LoginAppService>();
+            services
+                .AddScoped<IUsuarioAppService, UsuarioAppService>();
             #endregion
 
             #region Add Scoped Service
-            //services.AddScoped<ITipoRegiaoService, TipoRegiaoService>();            
+            services
+                .AddScoped<IUsersService, UsersService>();            
             #endregion
 
             #region Add Scoped Repository
-            //services.AddScoped<ITipoRegiaoRepository, TipoRegiaoRepositorio>();
+            services
+                .AddScoped<IUsersRepository, UsersRepositorio>();
             #endregion
         }
 
@@ -109,10 +84,11 @@ namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
 
             services.AddAuthorization(auth =>
             {
-                auth.AddPolicy("Bearer", new Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder()
-                    .AddAuthenticationSchemes(Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme‌​)
-                    .RequireAuthenticatedUser()
-                    .Build());
+                auth
+                  .AddPolicy("Bearer", new Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder()
+                  .AddAuthenticationSchemes(Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme‌​)
+                  .RequireAuthenticatedUser()
+                  .Build());
             });
         }
     }

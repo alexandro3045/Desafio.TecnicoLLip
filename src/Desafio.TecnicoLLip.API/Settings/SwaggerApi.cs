@@ -27,7 +27,7 @@ namespace Desafio.TecnicoLLip.API.Settings
                 {
                     Version = "v1",
                     Title = "Desafio Técnico LLip API",
-                    Description = "API da LLip em .net Core 3.1",
+                    Description = "API da LLip em .net 6",
                     TermsOfService = new Uri(URITERMSOFSERVICE),
                     Contact = new OpenApiContact
                     {
@@ -70,6 +70,8 @@ namespace Desafio.TecnicoLLip.API.Settings
                 string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
                 c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "Desafio Técnico LLIP API v1");
             });
+
+            app.UseCors();
         }
     }
 }

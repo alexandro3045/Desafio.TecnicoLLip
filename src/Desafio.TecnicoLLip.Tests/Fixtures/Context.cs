@@ -1,8 +1,10 @@
-﻿using Finjan.Integracao.Dynamics.Tests.Model;
+﻿#region Includes
+using Finjan.Integracao.Dynamics.Tests.Model;
 using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Reflection;
+#endregion
 
 namespace LlipTests.Fixtures
 {
@@ -20,13 +22,7 @@ namespace LlipTests.Fixtures
         protected static void SetupEnviroment()
         {
             Environment
-                .SetEnvironmentVariable("Corporativo", Configuration.Corporativo);
-
-            Environment
-                .SetEnvironmentVariable("SGE", Configuration.Sge);
-
-            Environment
-                .SetEnvironmentVariable("PROTHEUS", Configuration.Protheus);
+                .SetEnvironmentVariable("DesafioLLip", "DesafioLLip");           
 
             Environment
                 .SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", Configuration.APNETCORE_ENVIROMENT);

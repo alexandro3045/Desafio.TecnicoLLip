@@ -1,6 +1,6 @@
 ﻿#region Includes 
 using Desafio.TecnicoLLip.Application.Interfaces;
-using Desafio.TecnicoLLip.Domain.Models.Corporativo;
+using Desafio.TecnicoLLip.Domain.Models;
 using Desafio.TecnicoLLip.Domain.Models.Utility;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Configuration;
@@ -42,10 +42,6 @@ namespace Desafio.TecnicoLLip.Application.Services
 
         protected virtual void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-               //((IDisposable)SmtpMail)?.Dispose();
-            }
 
             if (nativeResource != IntPtr.Zero)
             {

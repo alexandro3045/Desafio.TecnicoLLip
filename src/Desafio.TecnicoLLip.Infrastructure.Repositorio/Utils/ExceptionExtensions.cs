@@ -2,7 +2,6 @@
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Utils
 {
     using Desafio.TecnicoLLip.Domain.Models.Base;
-	using Desafio.TecnicoLLip.Domain.Models.Corporativo;
     using Microsoft.EntityFrameworkCore;
     using System;
     using System.Data.SqlClient;
@@ -37,11 +36,6 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Utils
 			}
 
 			return sb.ToString();
-		}
-
-		public static Logger Logger(this Exception ex, Base entity)
-		{
-			return new Logger() { EventDate = DateTime.Now, Json = entity.ToJSON(), Mesage = ex.Message, Type = ex.GetType().FullName };
 		}
 
 		public static void SetException<TEntity>(this Exception ex, ref ObjectResult<TEntity> objResult, string action) 

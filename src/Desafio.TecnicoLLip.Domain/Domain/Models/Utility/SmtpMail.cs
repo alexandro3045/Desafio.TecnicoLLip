@@ -2,7 +2,7 @@
 {
     public class SmtpMail
     {
-        public string Subject { get; set; } = "Integração Dynamics";
+        public string Subject { get; set; } = "Integração LLip";
         public bool IsBodyHtml { get; set; } = true;
         public string Provider { get; set; }
         public int Port { get; set; }

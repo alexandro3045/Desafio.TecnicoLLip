@@ -1,6 +1,7 @@
-﻿using Desafio.TecnicoLLip.Domain.Models.Corporativo;
+﻿#region Includes
 using System;
 using System.Text;
+#endregion
 
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Utils
 {  
@@ -82,7 +83,7 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Utils
             Messages = result.Property<StringBuilder>("Messages");
             Exception = result.Property<Exception>("Exception");
         }
-        public Logger Logger => new Logger() { EventDate = DateTime.Now, Json = Json ?? Entity?.ToJSON(), Mesage = Messages?.ToString(), Type = Exception?.GetType().FullName };
+        
         #endregion
     }
 }

@@ -1,4 +1,4 @@
-﻿#region Usings
+﻿#region Includes
 using Desafio.TecnicoLLip.Application.Interfaces.Base;
 using Desafio.TecnicoLLip.Application.Utils;
 using Microsoft.AspNetCore.Authorization;
@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 #endregion
 
 namespace Desafio.TecnicoLLip.API.Base.Query
 {
-    [Authorize]
-    [ApiVersion("1.0")]
+
     [ApiController]
     [Route("api/[controller]/{version}")]
     public abstract class Base<V> : ControllerBase where V : Application.ViewModels.Base.Base
@@ -64,8 +64,6 @@ namespace Desafio.TecnicoLLip.API.Base.Query
 
 namespace Desafio.TecnicoLLip.API.Base.Crud
 {
-    [Authorize]
-    [ApiVersion("1.0")]
     [ApiController]
     [Route("api/[controller]/{version}")]
     public abstract class Base<V> : Query.Base<V> where V : Application.ViewModels.Base.Base
@@ -165,8 +163,6 @@ namespace Desafio.TecnicoLLip.API.Base.Crud
 
 namespace Desafio.TecnicoLLip.API.Query
 {
-    [Authorize]
-    [ApiVersion("1.0")]
     [ApiController]
     [Route("api/[controller]/{version}")]
     public abstract class Base<V, T> : ControllerBase
@@ -251,7 +247,6 @@ namespace Desafio.TecnicoLLip.API.Query
 
 namespace Desafio.TecnicoLLip.API.Crud
 {
-    [Authorize]
     [ApiVersion("1.0")]
     [ApiController]
     [Route("api/[controller]/{version}")]

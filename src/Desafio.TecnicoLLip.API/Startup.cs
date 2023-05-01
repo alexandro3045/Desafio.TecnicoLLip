@@ -1,10 +1,10 @@
-﻿using AutoMapper;
+﻿#region Includes
+using AutoMapper;
 using EntityFramework.Triggers;
 using Desafio.TecnicoLLip.API.Settings;
 using Desafio.TecnicoLLip.Application.AutoMapperConfigs;
 using Desafio.TecnicoLLip.Application.Interfaces;
 using Desafio.TecnicoLLip.Application.Services;
-using Desafio.TecnicoLLip.Domain.Models.Corporativo;
 using Desafio.TecnicoLLip.Infrastructure.CrossCutting;
 using Desafio.TecnicoLLip.Infrastructure.Data.Utils;
 using Microsoft.AspNetCore.Builder;
@@ -22,9 +22,9 @@ using System;
 using System.Diagnostics;
 using ControllersOptions = Desafio.TecnicoLLip.API.Settings.ControllersOptions;
 using Desafio.TecnicoLLip.Infrastructure.Data.Contextos;
-using Desafio.TecnicoLLip.Infrastructure.Data.Contextos.SGE;
+
 using Desafio.TecnicoLLip.Infrastructure.Data.Contextos.Corporativo;
-using Desafio.TecnicoLLip.Infrastructure.Data.Contextos.Protheus;
+#endregion
 
 namespace Desafio.TecnicoLLip.API
 {
@@ -34,7 +34,7 @@ namespace Desafio.TecnicoLLip.API
 
         public IWebHostEnvironment Environment { get; set; }
 
-        //public IEmailAppService EmailAppService { get; set; }
+        public IEmailAppService EmailAppService { get; set; }
 
         public Startup(IConfiguration configuration, IWebHostEnvironment environment/*, IEmailAppService emailAppService*/)
         {
@@ -59,7 +59,8 @@ namespace Desafio.TecnicoLLip.API
                     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 });
 
-            services.AddApplicationInsightsTelemetry();
+            services
+                .AddApplicationInsightsTelemetry();
 
             services
                 .AddApiVersioning(o =>
@@ -73,7 +74,8 @@ namespace Desafio.TecnicoLLip.API
             services.Configure<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProviderOptions>(
                 options => options.Level = System.IO.Compression.CompressionLevel.Optimal);
 
-            services.AddResponseCompression(options =>
+            services
+                .AddResponseCompression(options =>
             {
                 options.Providers.Add<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProvider>();
                 options.EnableForHttps = true;
@@ -103,7 +105,8 @@ namespace Desafio.TecnicoLLip.API
 
             ServicosAdicionais(services);
 
-            services.AddTriggers();
+            services
+                .AddTriggers();
         }
 
         /// <summary>
@@ -119,11 +122,14 @@ namespace Desafio.TecnicoLLip.API
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
                 .AddEnvironmentVariables();
 
-            app.UseRouting();
+            app
+              .UseRouting();
 
-            app.UseAuthentication();
+            app
+              .UseAuthentication();
 
-            app.UseAuthorization();
+            app
+              .UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -152,11 +158,9 @@ namespace Desafio.TecnicoLLip.API
 
             ConfiguracoesAdicionais(app, env);
 
-            app.UseTriggers(builder =>
-            {
-                builder.Triggers().Inserted.Add(entry => Debug.WriteLine(entry.Entity.ToString()));
-                //builder.Triggers<Logger, LoggerContext>().Inserted.Add(entry => Debug.WriteLine(entry.Entity.Mesage));
-            });
+            app
+             .UseCors(options => options.AllowAnyOrigin());
+
         }
 
         public void AddDbContext<TContext>(IServiceCollection services, string connection) where TContext : DbContext
@@ -177,13 +181,7 @@ namespace Desafio.TecnicoLLip.API
 
         protected virtual void ServicosAdicionais(IServiceCollection services)
         {
-            AddDbContext<CorporativoContext>(services, "Corporativo");
-
-            AddDbContext<SgeContext>(services, "SGE");
-
-            AddDbContext<ProtheusContext>(services, "PROTHEUS");
-
-            //AddDbContext<LoggerContext>(services, "Corporativo");
+            AddDbContext<DesafioLlipContext>(services, "DesafioLlip");
 
             services
                 .AddLogging();

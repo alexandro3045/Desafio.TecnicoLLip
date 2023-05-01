@@ -1,7 +1,4 @@
-﻿using Desafio.TecnicoLLip.Domain.Models.Corporativo.Gestor.Tipos;
-using Desafio.TecnicoLLip.Domain.Models.Corporativo.Gestor.Tipos.Odontograma;
-using Desafio.TecnicoLLip.Domain.Models.Utility;
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Validators;
 using System;
 
@@ -66,21 +63,7 @@ namespace Desafio.TecnicoLLip.Domain.Validations
                 .GreaterThan((short)0)
                 .WithMessage("Id unique identifier must be greater to 0");
         }
-
-        public static  IRuleBuilderOptions<T, Face> IsValidFace<T>(this IRuleBuilder<T, Face> ruleBuilder)
-        {
-            return ruleBuilder
-              .Must(x => x == null || x.IsEqualTo(Face.Sim))
-              .WithMessage("{PropertyName} must be null or S");
-        }
-
-        public static  IRuleBuilderOptions<T, Raiz> IsValidRaiz<T>(this IRuleBuilder<T, Raiz> ruleBuilder)
-        {
-            return ruleBuilder
-              .Must(x => x == null || x.IsEqualTo(Raiz.Sim))
-              .WithMessage("{PropertyName} must be null or S");
-        }
-
+        
         public static  IRuleBuilderOptions<T, int?> IsRequired<T>(this IRuleBuilder<T, int?> ruleBuilder)
         {
             return ruleBuilder
@@ -184,32 +167,7 @@ namespace Desafio.TecnicoLLip.Domain.Validations
                 .WithMessage("{PropertyName} must not be null or empty");
         }
 
-        public static  IRuleBuilderOptions<T, Enums<byte?>> NotNullNotEmpty<T>(this IRuleBuilder<T, Enums<byte?>> ruleBuilder)
-        {
-            return ruleBuilder
-                .NotNull()
-                .NotEmpty()
-                .WithMessage("{PropertyName} must not be null or empty");
-        }
-
-        public static  IRuleBuilderOptions<T, Enums<char?>> NotNullNotEmpty<T>(this IRuleBuilder<T, Enums<char?>> ruleBuilder)
-        {
-            return ruleBuilder
-                .NotNull()
-                .NotEmpty()
-                .WithMessage("{PropertyName} must not be null or empty");
-        }
-
         public static  IRuleBuilderOptions<T, byte[]> NotNullNotEmpty<T>(this IRuleBuilder<T, byte[]> ruleBuilder)
-        {
-            return ruleBuilder
-                .NotNull()
-                .NotEmpty()
-                .WithMessage("{PropertyName} must not be null or empty");
-        }
-
-
-        public static  IRuleBuilderOptions<T, Enums<string>> NotNullNotEmpty<T>(this IRuleBuilder<T, Enums<string>> ruleBuilder)
         {
             return ruleBuilder
                 .NotNull()

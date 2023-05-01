@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 	<WarningsNotAsErrors>CS8032;$(WarningsNotAsErrors)</WarningsNotAsErrors>
   </PropertyGroup>
 
@@ -14,8 +14,6 @@
   <ItemGroup>
     <Compile Remove="Models\MotivoRegraExclusao.cs" />
     <Compile Remove="Models\RegraEtapa.cs" />
-    <Compile Remove="Validations\Corporativo\AreaValidator.cs" />
-    <Compile Remove="Validations\Corporativo\CategoriaValidator.cs" />
   </ItemGroup>
 
   <ItemGroup>

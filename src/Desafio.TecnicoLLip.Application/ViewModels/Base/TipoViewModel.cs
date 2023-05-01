@@ -7,10 +7,12 @@ namespace Desafio.TecnicoLLip.Application.ViewModels.Base
     public abstract class TipoViewModel<T> : BaseViewModel<T>
     {
         ///<summary>
-        ///Descrição da entidade.
+        ///Nome da entidade.
         ///</summary>
         [DataMember]
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string Descricao { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Include)]
+        public string Nome { get; set; }
+
+
     }
 }

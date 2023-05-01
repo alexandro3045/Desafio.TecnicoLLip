@@ -1,4 +1,4 @@
-﻿using Desafio.TecnicoLLip.Domain.Models.Corporativo;
+﻿using Desafio.TecnicoLLip.Domain.Models;
 
 namespace Desafio.TecnicoLLip.Application.Interfaces
 {
