@@ -1,15 +1,10 @@
 {
   "IsDesenv": true,
   "Scheme": "http",
-  "Host": "http://localhost:5001/IntegracaoDynamics",
-  "Path": "IntegracaoDynamics/api",
+  "Host": "http://localhost:5001",
+  "Path": "/api",
   "APNETCORE_ENVIROMENT": "Development",
   "Port": "5001",
-  "Corporativo": "Data Source=SRVSEDE01543;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Producao",
-  "SGE": "Data Source=SRVSEDE01543;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=CorporeRM",
-  "PROTHEUS": "Data Source=SRVSEDE01543;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=SDBPRD",
-  "Login": "TLlip12ab",
-  "AccessKey": "DISISRules",
-  "UrlToken": "/IntegracaoDynamics/api/Logins",
+  "UrlToken": "/api/Logins",
   "ApiVersion": "v1"
 }
