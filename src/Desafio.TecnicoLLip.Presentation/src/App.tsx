@@ -13,6 +13,7 @@ import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
+import Project from "./components/project.component";
 
 import EventBus from "./common/EventBus";
 
@@ -41,9 +42,9 @@ class App extends Component<Props, State> {
 
     if (user) {
       this.setState({
-        currentUser: user,
-        showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+          currentUser: user,
+          showModeratorBoard: true,//user.roles.includes("ROLE_MODERATOR"),
+          showAdminBoard: true,//user.roles.includes("ROLE_ADMIN"),
       });
     }
 
@@ -94,11 +95,20 @@ class App extends Component<Props, State> {
 
             {currentUser && (
               <li className="nav-item">
-                <Link to={"/user"} className="nav-link">
-                  User
+                <Link to={"/register"} className="nav-link">
+                  Cadastro Usuario
                 </Link>
               </li>
             )}
+
+            {currentUser && (
+                <li className="nav-item">
+                    <Link to={"/project"} className="nav-link">
+                        Cadastro
+                    </Link>
+                </li>
+            )}
+
           </div>
 
           {currentUser ? (
@@ -141,6 +151,7 @@ class App extends Component<Props, State> {
             <Route path="/user" element={<BoardUser />} />
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
+            <Route path="/project" element={<Project />} />
           </Routes>
         </div>
 

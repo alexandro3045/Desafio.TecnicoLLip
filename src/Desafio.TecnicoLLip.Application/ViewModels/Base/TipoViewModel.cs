@@ -11,7 +11,7 @@ namespace Desafio.TecnicoLLip.Application.ViewModels.Base
         ///</summary>
         [DataMember]
         [JsonProperty(NullValueHandling = NullValueHandling.Include)]
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
 
     }

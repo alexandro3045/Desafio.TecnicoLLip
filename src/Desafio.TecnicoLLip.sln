@@ -6,6 +6,18 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8ECC2664-1E3A-4AF5-8477-16853808BF02}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{F1B87EC0-D9B5-4FF5-98A7-FB7E89B06BD9}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\.env = Desafio.TecnicoLLip.Presentation\.env
+		Desafio.TecnicoLLip.Presentation\.gitignore = Desafio.TecnicoLLip.Presentation\.gitignore
+		Desafio.TecnicoLLip.Presentation\package.json = Desafio.TecnicoLLip.Presentation\package.json
+		Desafio.TecnicoLLip.Presentation\react-typescript-login-example-form-validation.png = Desafio.TecnicoLLip.Presentation\react-typescript-login-example-form-validation.png
+		Desafio.TecnicoLLip.Presentation\react-typescript-login-example-login.png = Desafio.TecnicoLLip.Presentation\react-typescript-login-example-login.png
+		Desafio.TecnicoLLip.Presentation\react-typescript-login-example-profile-page.png = Desafio.TecnicoLLip.Presentation\react-typescript-login-example-profile-page.png
+		Desafio.TecnicoLLip.Presentation\react-typescript-login-example-signup.png = Desafio.TecnicoLLip.Presentation\react-typescript-login-example-signup.png
+		Desafio.TecnicoLLip.Presentation\README.md = Desafio.TecnicoLLip.Presentation\README.md
+		Desafio.TecnicoLLip.Presentation\tsconfig.json = Desafio.TecnicoLLip.Presentation\tsconfig.json
+		Desafio.TecnicoLLip.Presentation\yarn.lock = Desafio.TecnicoLLip.Presentation\yarn.lock
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{57F5B698-1520-4ADE-84F1-5335F9B498AE}"
 EndProject
@@ -37,7 +49,57 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DesafioLlip", "Database LlI
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - Database", "7 - Database", "{3CC742B3-195C-4AF5-B666-D25DF953EF1B}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Desafio.TecnicoLLip.Presentation", "Presentation\Desafio.TecnicoLLip.Presentation.esproj", "{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{BB1F303F-226E-48EB-9563-FBFF05BFD7D0}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\public\favicon.ico = Desafio.TecnicoLLip.Presentation\public\favicon.ico
+		Desafio.TecnicoLLip.Presentation\public\index.html = Desafio.TecnicoLLip.Presentation\public\index.html
+		Desafio.TecnicoLLip.Presentation\public\logo192.png = Desafio.TecnicoLLip.Presentation\public\logo192.png
+		Desafio.TecnicoLLip.Presentation\public\logo512.png = Desafio.TecnicoLLip.Presentation\public\logo512.png
+		Desafio.TecnicoLLip.Presentation\public\manifest.json = Desafio.TecnicoLLip.Presentation\public\manifest.json
+		Desafio.TecnicoLLip.Presentation\public\robots.txt = Desafio.TecnicoLLip.Presentation\public\robots.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ACA7A41D-3E1B-43D6-B652-434825605CAC}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\src\App.css = Desafio.TecnicoLLip.Presentation\src\App.css
+		Desafio.TecnicoLLip.Presentation\src\App.tsx = Desafio.TecnicoLLip.Presentation\src\App.tsx
+		Desafio.TecnicoLLip.Presentation\src\index.css = Desafio.TecnicoLLip.Presentation\src\index.css
+		Desafio.TecnicoLLip.Presentation\src\index.tsx = Desafio.TecnicoLLip.Presentation\src\index.tsx
+		Desafio.TecnicoLLip.Presentation\src\logo.svg = Desafio.TecnicoLLip.Presentation\src\logo.svg
+		Desafio.TecnicoLLip.Presentation\src\react-app-env.d.ts = Desafio.TecnicoLLip.Presentation\src\react-app-env.d.ts
+		Desafio.TecnicoLLip.Presentation\src\reportWebVitals.ts = Desafio.TecnicoLLip.Presentation\src\reportWebVitals.ts
+		Desafio.TecnicoLLip.Presentation\src\setupTests.ts = Desafio.TecnicoLLip.Presentation\src\setupTests.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{7A2EE282-7B5E-4F40-A0E0-BF85906CFB13}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\src\common\EventBus.ts = Desafio.TecnicoLLip.Presentation\src\common\EventBus.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{34941AB5-8D2F-4F9E-B1B9-5FAADB269F46}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\src\components\board-admin.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\board-admin.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\board-moderator.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\board-moderator.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\board-user.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\board-user.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\home.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\home.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\login.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\login.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\profile.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\profile.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\project.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\project.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\register.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\register.component.tsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{A4BD674A-B4F4-48BA-AEB1-FC4670BF02D5}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\src\services\auth-header.ts = Desafio.TecnicoLLip.Presentation\src\services\auth-header.ts
+		Desafio.TecnicoLLip.Presentation\src\services\auth.service.ts = Desafio.TecnicoLLip.Presentation\src\services\auth.service.ts
+		Desafio.TecnicoLLip.Presentation\src\services\project.service.ts = Desafio.TecnicoLLip.Presentation\src\services\project.service.ts
+		Desafio.TecnicoLLip.Presentation\src\services\user.service.ts = Desafio.TecnicoLLip.Presentation\src\services\user.service.ts
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "types", "types", "{A4639178-0354-46C8-A1E0-E93DEFC14E9C}"
+	ProjectSection(SolutionItems) = preProject
+		Desafio.TecnicoLLip.Presentation\src\types\user.type.ts = Desafio.TecnicoLLip.Presentation\src\types\user.type.ts
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,12 +145,6 @@ Global
 		{A7CBAF15-5185-48CF-B5BC-57550D985E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7CBAF15-5185-48CF-B5BC-57550D985E67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7CBAF15-5185-48CF-B5BC-57550D985E67}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,7 +166,12 @@ Global
 		{FFD5815E-FE23-4716-AF7A-97F8FC9E2BBF} = {EA10D257-0B69-4A5C-8719-AB682C37DDA2}
 		{A7CBAF15-5185-48CF-B5BC-57550D985E67} = {3CC742B3-195C-4AF5-B666-D25DF953EF1B}
 		{3CC742B3-195C-4AF5-B666-D25DF953EF1B} = {8ECC2664-1E3A-4AF5-8477-16853808BF02}
-		{59E3DDF4-B78D-4CF7-A4CA-BC87470321F5} = {F1B87EC0-D9B5-4FF5-98A7-FB7E89B06BD9}
+		{BB1F303F-226E-48EB-9563-FBFF05BFD7D0} = {F1B87EC0-D9B5-4FF5-98A7-FB7E89B06BD9}
+		{ACA7A41D-3E1B-43D6-B652-434825605CAC} = {F1B87EC0-D9B5-4FF5-98A7-FB7E89B06BD9}
+		{7A2EE282-7B5E-4F40-A0E0-BF85906CFB13} = {ACA7A41D-3E1B-43D6-B652-434825605CAC}
+		{34941AB5-8D2F-4F9E-B1B9-5FAADB269F46} = {ACA7A41D-3E1B-43D6-B652-434825605CAC}
+		{A4BD674A-B4F4-48BA-AEB1-FC4670BF02D5} = {ACA7A41D-3E1B-43D6-B652-434825605CAC}
+		{A4639178-0354-46C8-A1E0-E93DEFC14E9C} = {ACA7A41D-3E1B-43D6-B652-434825605CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {429830A9-6FD6-4358-9056-46BCDE6F1B7E}

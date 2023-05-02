@@ -5,5 +5,5 @@ using Desafio.TecnicoLLip.Domain.Models;
 
 namespace Desafio.TecnicoLLip.Domain.Core.Interfaces.Services
 {
-    public interface IUsersService : IService<Users> { }
+    public interface IProjectsService :  IService<Projects> { }
 }

@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import AuthService from "../services/auth.service";
+import UserService from "../services/user.service";
 
 type Props = {};
 
@@ -17,6 +17,7 @@ type State = {
 export default class Register extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
+
     this.handleRegister = this.handleRegister.bind(this);
 
     this.state = {
@@ -64,7 +65,7 @@ export default class Register extends Component<Props, State> {
       successful: false
     });
 
-    AuthService.register(
+    UserService.register(
       username,
       email,
       password

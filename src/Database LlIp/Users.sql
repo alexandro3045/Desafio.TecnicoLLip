@@ -4,4 +4,4 @@
     [Name] NVARCHAR(200) NULL, 
     [Email] NVARCHAR(200) NULL, 
     [Password] NVARCHAR(400) NULL
-)
+);

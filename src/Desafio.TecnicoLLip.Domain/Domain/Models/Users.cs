@@ -1,5 +1,7 @@
-﻿using Desafio.TecnicoLLip.Domain.Models.Base;
+﻿#region Includes
+using Desafio.TecnicoLLip.Domain.Models.Base;
 using System.ComponentModel.DataAnnotations;
+#endregion
 
 namespace Desafio.TecnicoLLip.Domain.Models
 {

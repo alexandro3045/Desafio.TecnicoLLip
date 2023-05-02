@@ -2,6 +2,7 @@
 using AutoMapper;
 using Desafio.TecnicoLLip.Application.ViewModels;
 using Desafio.TecnicoLLip.Domain.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 #endregion
 
 namespace Desafio.TecnicoLLip.Application.AutoMapperConfigs
@@ -17,7 +18,12 @@ namespace Desafio.TecnicoLLip.Application.AutoMapperConfigs
                 .ReverseMap();
 
             CreateMap<Users, UsuarioViewModel>()
-                //.ForMember(dest => dest.Nome, opt => opt.MapFrom(src => src.Name))
+                .ReverseMap();
+
+            CreateMap<Projects, ProjetoViewModel>()
+                .ForMember(dest => dest.DataCriacao, opt => opt.MapFrom(src => src.CreationDate))
+                .ForMember(dest => dest.Descricao, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Titulo, opt => opt.MapFrom(src => src.Title))
                 .ReverseMap();
         }
     }

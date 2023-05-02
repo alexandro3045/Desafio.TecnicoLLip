@@ -9,7 +9,7 @@ using Desafio.TecnicoLLip.Domain.Services.Validations;
 using Desafio.TecnicoLLip.Domain.Services.Services;
 using Desafio.TecnicoLLip.Domain.Core.Interfaces.Services;
 using Desafio.TecnicoLLip.Domain.Core.Interfaces.Repository;
-using Desafio.TecnicoLLip.Infrastructure.Data.Repositorios.Corporativo;
+using Desafio.TecnicoLLip.Infrastructure.Data.Repositorios;
 #endregion
 
 namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
@@ -29,6 +29,8 @@ namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
             #region Add singleton
             services
                 .AddSingleton<UsersValidator>();
+            services
+                .AddSingleton<ProjectsValidator>();
             #endregion
 
             #region Add Scoped AppService
@@ -38,16 +40,22 @@ namespace Desafio.TecnicoLLip.Infrastructure.CrossCutting
                 .AddScoped<ILoginAppService, LoginAppService>();
             services
                 .AddScoped<IUsuarioAppService, UsuarioAppService>();
+            services
+                .AddScoped<IProjetoAppService, ProjetoAppService>();
             #endregion
 
             #region Add Scoped Service
             services
-                .AddScoped<IUsersService, UsersService>();            
+                .AddScoped<IUsersService, UsersService>();
+            services
+                .AddScoped<IProjectsService, ProjectsService>();
             #endregion
 
             #region Add Scoped Repository
             services
                 .AddScoped<IUsersRepository, UsersRepositorio>();
+            services
+                .AddScoped<IProjectsRepository, ProjectsRepositorio>();
             #endregion
         }
 

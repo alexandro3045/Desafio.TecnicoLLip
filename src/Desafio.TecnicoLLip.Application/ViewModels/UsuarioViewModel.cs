@@ -9,7 +9,6 @@ namespace Desafio.TecnicoLLip.Application.ViewModels
 {
     public class UsuarioViewModel : TipoViewModel<int>
     {
-
         /////<summary>
         /////Email do usuário no cadastro de novos usuários.
         /////</summary>

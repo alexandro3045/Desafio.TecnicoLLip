@@ -76,10 +76,10 @@ namespace Desafio.TecnicoLLip.API
 
             services
                 .AddResponseCompression(options =>
-            {
-                options.Providers.Add<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProvider>();
-                options.EnableForHttps = true;
-            });
+                {
+                    options.Providers.Add<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProvider>();
+                    options.EnableForHttps = true;
+                });
 
             services
                 .AddLogging(loggingBuilder =>
@@ -133,7 +133,7 @@ namespace Desafio.TecnicoLLip.API
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
             });
 
             if (env.IsDevelopment())
@@ -159,22 +159,21 @@ namespace Desafio.TecnicoLLip.API
             ConfiguracoesAdicionais(app, env);
 
             app
-             .UseCors(options => options.AllowAnyOrigin());
-
+             .UseCors();
         }
 
         public void AddDbContext<TContext>(IServiceCollection services, string connection) where TContext : DbContext
         {
             services
-                .AddDbContext<TContext>(options => options
-                .UseSqlServer(Configuration.GetConnectionString(connection), options =>
+              .AddDbContext<TContext>(options => options
+              .UseSqlServer(Configuration.GetConnectionString(connection), options =>
                 {
                     options.EnableRetryOnFailure(
                         maxRetryCount: 10,
                         maxRetryDelay: TimeSpan.FromSeconds(30),
                         errorNumbersToAdd: null);
                 }
-                )
+              )
                 .EnableSensitiveDataLogging(Environment.IsDevelopment())
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll));
         }
@@ -205,6 +204,18 @@ namespace Desafio.TecnicoLLip.API
                     {
                         opts.Filters.Add(new AllowAnonymousFilter());
                     });
+
+                services.AddCors(options =>
+                {
+
+                    options.AddDefaultPolicy(
+                        policy =>
+                        {
+                            policy.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                        });
+                });
             }
         }
 

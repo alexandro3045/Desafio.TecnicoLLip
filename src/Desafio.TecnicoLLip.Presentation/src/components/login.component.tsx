@@ -2,14 +2,14 @@ import { Component } from "react";
 import { Navigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+
 import AuthService from "../services/auth.service";
 
 type Props = {};
 
 type State = {
   redirect: string | null,
-  email: string,
+  username: string,
   password: string,
   loading: boolean,
   message: string
@@ -22,7 +22,7 @@ export default class Login extends Component<Props, State> {
 
     this.state = {
       redirect: null,
-      email: "",
+      username: "",
       password: "",
       loading: false,
       message: ""
@@ -43,24 +43,24 @@ export default class Login extends Component<Props, State> {
 
   validationSchema() {
     return Yup.object().shape({
-      email: Yup.string().required("This field is required!"),
+      username: Yup.string().required("This field is required!"),
       password: Yup.string().required("This field is required!"),
     });
   }
 
-    handleLogin(formValue: { email: string; password: string }) {
-        const { email, password } = formValue;
+  handleLogin(formValue: { username: string; password: string }) {
+    const { username, password } = formValue;
 
     this.setState({
       message: "",
       loading: true
     });
-        axios.defaults.withCredentials = true;
 
-    AuthService.login(email, password).then(
+
+    AuthService.login(username, password).then(
       () => {
         this.setState({
-          redirect: "/profile"
+          redirect: "/project"
         });
       },
       error => {
@@ -87,7 +87,7 @@ export default class Login extends Component<Props, State> {
     const { loading, message } = this.state;
 
     const initialValues = {
-      email: "",
+      username: "",
       password: "",
     };
 
@@ -107,10 +107,10 @@ export default class Login extends Component<Props, State> {
           >
             <Form>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <Field name="email" type="text" className="form-control" />
+                <label htmlFor="username">Username</label>
+                <Field name="username" type="text" className="form-control" />
                 <ErrorMessage
-                  name="email"
+                  name="username"
                   component="div"
                   className="alert alert-danger"
                 />

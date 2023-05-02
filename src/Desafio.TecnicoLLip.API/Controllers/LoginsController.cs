@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using Desafio.TecnicoLLip.API.Settings;
+using System.IO;
 #endregion
 
 namespace Desafio.TecnicoLLip.API.Controllers
