@@ -27,6 +27,21 @@ class ProjectService {
     .catch((err) => {
        console.error("ops! ocorreu um erro" + err);
     }); 
+ }
+ listar() {
+    var user = authService.getCurrentUser();
+
+    return axios.get(API_URL + "Projetos/v1/GetAll/id/asc/50/0", {
+        headers: {
+            'Authorization': 'Bearer ' + user.accessToken
+        }
+    })
+    .then(response => {
+        return response.data;
+    })
+    .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+    });
   }
 }
 

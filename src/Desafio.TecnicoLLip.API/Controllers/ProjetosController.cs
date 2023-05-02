@@ -18,6 +18,6 @@ namespace Desafio.TecnicoLLip.API.Controllers
     [Route("api/[controller]/{version}")]
     public class ProjetosController : Base<ProjetoViewModel>
     {
-        public ProjetosController(IProjetoAppService appService) : base(appService) { }       
+        public ProjetosController(IProjetoAppService appService) : base(appService,"Id") { }       
     }
 }

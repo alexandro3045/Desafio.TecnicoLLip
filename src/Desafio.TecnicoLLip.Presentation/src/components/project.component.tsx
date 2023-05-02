@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-
+import { Navigate } from "react-router-dom";
 import ProjectService from "../services/project.service";
 
 type Props = {};
@@ -12,7 +12,8 @@ type State = {
   descricao: string,
   datacriacao: Date,
   successful: boolean,
-  message: string
+  message: string,
+  redirect: string | null
 };
 
 export default class Project extends Component<Props, State> {
@@ -27,7 +28,8 @@ export default class Project extends Component<Props, State> {
       descricao: "",
       datacriacao: new Date(),
       successful: false,
-      message: ""
+        message: "",
+        redirect: null
     };
   }
 
@@ -74,7 +76,8 @@ export default class Project extends Component<Props, State> {
       response => {
         this.setState({
           message: response.data.message,
-          successful: true
+          successful: true,
+          redirect: "/projectlist"
         });
       },
       error => {
@@ -94,6 +97,11 @@ export default class Project extends Component<Props, State> {
   }
 
   render() {
+
+    if (this.state.redirect) {
+        return <Navigate to={this.state.redirect} />
+    }
+
     const { successful, message } = this.state;
 
     const initialValues = {

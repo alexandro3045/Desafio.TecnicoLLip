@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = "https://localhost:5001/api/";
 
 class AuthService {
-    login(username: string, password: string) {
+  login(username: string, password: string) {
         return axios
             .post(API_URL + "Logins", { email: username, senha: password 
       })
@@ -14,7 +14,7 @@ class AuthService {
         return response.data;
       })
       .catch((e) => {
-          console.error(e.message); // "oh, no!"
+          console.error(e.message);
       });
   }
 

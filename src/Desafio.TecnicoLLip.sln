@@ -85,6 +85,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", 
 		Desafio.TecnicoLLip.Presentation\src\components\login.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\login.component.tsx
 		Desafio.TecnicoLLip.Presentation\src\components\profile.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\profile.component.tsx
 		Desafio.TecnicoLLip.Presentation\src\components\project.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\project.component.tsx
+		Desafio.TecnicoLLip.Presentation\src\components\projectlist.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\projectlist.component.tsx
 		Desafio.TecnicoLLip.Presentation\src\components\register.component.tsx = Desafio.TecnicoLLip.Presentation\src\components\register.component.tsx
 	EndProjectSection
 EndProject

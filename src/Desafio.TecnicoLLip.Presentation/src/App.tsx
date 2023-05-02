@@ -9,10 +9,8 @@ import IUser from './types/user.type';
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
-import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
-import BoardModerator from "./components/board-moderator.component";
-import BoardAdmin from "./components/board-admin.component";
+import ProjectList from "./components/projectlist.component";
 import Project from "./components/project.component";
 
 import EventBus from "./common/EventBus";
@@ -43,8 +41,8 @@ class App extends Component<Props, State> {
     if (user) {
       this.setState({
           currentUser: user,
-          showModeratorBoard: true,//user.roles.includes("ROLE_MODERATOR"),
-          showAdminBoard: true,//user.roles.includes("ROLE_ADMIN"),
+          showModeratorBoard: true,
+          showAdminBoard: true
       });
     }
 
@@ -76,27 +74,11 @@ class App extends Component<Props, State> {
                 Home
               </Link>
             </li>
-
-            {showModeratorBoard && (
-              <li className="nav-item">
-                <Link to={"/mod"} className="nav-link">
-                  Moderator Board
-                </Link>
-              </li>
-            )}
-
-            {showAdminBoard && (
-              <li className="nav-item">
-                <Link to={"/admin"} className="nav-link">
-                  Admin Board
-                </Link>
-              </li>
-            )}
-
+                       
             {currentUser && (
               <li className="nav-item">
                 <Link to={"/register"} className="nav-link">
-                  Cadastro Usuario
+                  Usuarios
                 </Link>
               </li>
             )}
@@ -104,7 +86,7 @@ class App extends Component<Props, State> {
             {currentUser && (
                 <li className="nav-item">
                     <Link to={"/project"} className="nav-link">
-                        Cadastro
+                        Projetos
                     </Link>
                 </li>
             )}
@@ -147,11 +129,9 @@ class App extends Component<Props, State> {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/user" element={<BoardUser />} />
-            <Route path="/mod" element={<BoardModerator />} />
-            <Route path="/admin" element={<BoardAdmin />} />
-            <Route path="/project" element={<Project />} />
+           <Route path="/user" element={<BoardUser />} />
+           <Route path="/projectlist" element={<ProjectList />} />
+           <Route path="/project" element={<Project />} />
           </Routes>
         </div>
 
