@@ -105,8 +105,7 @@ export default class Project extends Component<Props, State> {
 
     return (
       <div className="col-md-12">
-        <div className="card card-container">
-          
+        <div className="card card-container">          
           <Formik
             initialValues={initialValues}
             validationSchema={this.validationSchema}
