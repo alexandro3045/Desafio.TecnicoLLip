@@ -1,11 +1,33 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
 
+import Paper from '@mui/material/Paper';
+import {
+  TreeDataState,
+  CustomTreeData,
+} from '@devexpress/dx-react-grid';
+import {
+  Grid,
+  Table,
+  TableHeaderRow,
+  TableTreeColumn,
+} from '@devexpress/dx-react-grid-material-ui';
+
+//import {
+//  generateRows,
+//  defaultColumnValues,
+//} from '../../../demo-data/generator';
+//const getChildRows = (row, rootRows) => (row ? row.items : rootRows);
+
 type Props = {};
 
 type Projects = { id: number, titulo: string, descricao: string, dataCriacao: Date };
 
 type State = { data: Array<Projects>, redirect: string | null };
+
+
+
+
 
 export default class ProjectList extends Component<Props, State> {
   constructor(props: Props) {
@@ -54,9 +76,9 @@ export default class ProjectList extends Component<Props, State> {
                 </table> 
                 <table>
                     <tr>
-                        <td>Título</td>
-                        <td>Descrição</td>
-                        <td>Data de Criação</td>
+                        <td>Tï¿½tulo</td>
+                        <td>Descriï¿½ï¿½o</td>
+                        <td>Data de Criaï¿½ï¿½o</td>
                     </tr>
                 </table> 
                 {data.map((reg, index) => {
