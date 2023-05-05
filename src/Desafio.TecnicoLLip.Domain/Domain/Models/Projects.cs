@@ -1,6 +1,8 @@
 ﻿#region Includes
 using Desafio.TecnicoLLip.Domain.Models.Base;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 #endregion
 
@@ -18,5 +20,7 @@ namespace Desafio.TecnicoLLip.Domain.Models
 
       [Required]
       public DateTime CreationDate { get; set; }
+
+      public IList<Activities> Activities { get; set; }
     }
 }

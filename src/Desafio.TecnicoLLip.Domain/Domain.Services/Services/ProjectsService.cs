@@ -4,6 +4,7 @@ using Desafio.TecnicoLLip.Domain.Core.Interfaces.Services;
 using Desafio.TecnicoLLip.Domain.Models;
 using Desafio.TecnicoLLip.Domain.Services.Base;
 using Desafio.TecnicoLLip.Domain.Services.Validations;
+using System.Collections.Generic;
 #endregion
 
 namespace Desafio.TecnicoLLip.Domain.Services.Services

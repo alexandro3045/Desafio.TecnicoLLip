@@ -45,6 +45,9 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Contextos.Corporativo
 
             modelBuilder
                 .ApplyConfiguration(new ProjectsMap());
+
+            modelBuilder
+                .ApplyConfiguration(new ActivitiesMap());
             #endregion
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))

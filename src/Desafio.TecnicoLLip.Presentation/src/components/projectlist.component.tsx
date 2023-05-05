@@ -1,33 +1,71 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
 
-import Paper from '@mui/material/Paper';
-import {
-  TreeDataState,
-  CustomTreeData,
-} from '@devexpress/dx-react-grid';
-import {
-  Grid,
-  Table,
-  TableHeaderRow,
-  TableTreeColumn,
-} from '@devexpress/dx-react-grid-material-ui';
-
-//import {
-//  generateRows,
-//  defaultColumnValues,
-//} from '../../../demo-data/generator';
-//const getChildRows = (row, rootRows) => (row ? row.items : rootRows);
-
 type Props = {};
 
 type Projects = { id: number, titulo: string, descricao: string, dataCriacao: Date };
 
 type State = { data: Array<Projects>, redirect: string | null };
 
+export type Person = {
+  firstName: string;
+  lastName: string;
+  address: string;
+  city: string;
+  state: string;
+  subRows?: Person[]; //Each person can have sub rows of more people
+};
 
-
-
+export const data = [
+  {
+    firstName: 'Dylan',
+    lastName: 'Murray',
+    address: '261 Erdman Ford',
+    city: 'East Daphne',
+    state: 'Kentucky',
+    subRows: [
+      {
+        firstName: 'Ervin',
+        lastName: 'Reinger',
+        address: '566 Brakus Inlet',
+        city: 'South Linda',
+        state: 'West Virginia',
+        subRows: [
+          {
+            firstName: 'Jordane',
+            lastName: 'Homenick',
+            address: '1234 Brakus Inlet',
+            city: 'South Linda',
+            state: 'West Virginia',
+          },
+        ],
+      },
+      {
+        firstName: 'Brittany',
+        lastName: 'McCullough',
+        address: '722 Emie Stream',
+        city: 'Lincoln',
+        state: 'Nebraska',
+      },
+    ],
+  },
+  {
+    firstName: 'Raquel',
+    lastName: 'Kohler',
+    address: '769 Dominic Grove',
+    city: 'Columbus',
+    state: 'Ohio',
+    subRows: [
+      {
+        firstName: 'Branson',
+        lastName: 'Frami',
+        address: '32188 Larkin Turnpike',
+        city: 'Charleston',
+        state: 'South Carolina',
+      },
+    ],
+  },
+];
 
 export default class ProjectList extends Component<Props, State> {
   constructor(props: Props) {
@@ -63,10 +101,10 @@ export default class ProjectList extends Component<Props, State> {
 
   render() {
     const { data } = this.state;
-      
+
     return (
       <div className="col-md-12">
-            <div className="card card-container"> 
+        <div className="card card-container"> 
                 <table>
                     <tr>
                         <td>
@@ -76,9 +114,9 @@ export default class ProjectList extends Component<Props, State> {
                 </table> 
                 <table>
                     <tr>
-                        <td>T�tulo</td>
-                        <td>Descri��o</td>
-                        <td>Data de Cria��o</td>
+                        <td>Título</td>
+                        <td>Descrição</td>
+                        <td>Data de Criação</td>
                     </tr>
                 </table> 
                 {data.map((reg, index) => {

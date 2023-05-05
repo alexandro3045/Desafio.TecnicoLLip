@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 #endregion
 
 namespace Desafio.TecnicoLLip.API.Controllers
@@ -18,6 +20,6 @@ namespace Desafio.TecnicoLLip.API.Controllers
     [Route("api/[controller]/{version}")]
     public class ProjetosController : Base<ProjetoViewModel>
     {
-        public ProjetosController(IProjetoAppService appService) : base(appService,"Id") { }       
+        public ProjetosController(IProjetoAppService appService) : base(appService,"Id") { }
     }
 }

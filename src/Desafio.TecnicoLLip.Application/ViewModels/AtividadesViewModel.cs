@@ -2,24 +2,23 @@
 using Desafio.TecnicoLLip.Application.ViewModels.Base;
 using Desafio.TecnicoLLip.Domain.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 #endregion
 
 namespace Desafio.TecnicoLLip.Application.ViewModels
 {
-    public class ProjetoViewModel : Base.Base
+    public class AtividadesViewModel : Base.Base
     {
         /////<summary>
-        /////Id do cadastro de novos projetos.
+        /////Id do cadastro de novas atividades.
         /////</summary>
         [Required]
         [DataMember]
         public int Id { get; set; }
 
         /////<summary>
-        /////Título do cadastro de novos projetos.
+        /////Título do cadastro de novas atividades.
         /////</summary>
         [Required]
         [StringLength(100)]
@@ -27,7 +26,7 @@ namespace Desafio.TecnicoLLip.Application.ViewModels
         public string Titulo { get; set; }
 
         /////<summary>
-        /////Descricão do cadastro de novos projetos.
+        /////Descricão do cadastro de novas atividades.
         /////</summary>
         [Required]
         [StringLength(600)]
@@ -35,17 +34,25 @@ namespace Desafio.TecnicoLLip.Application.ViewModels
         public string Descricao { get; set; }
 
         /////<summary>
-        /////Descricão do cadastro de novos projetos.
+        /////Data criação do cadastro de novas atividades.
         /////</summary>
         [Required]
         [DataMember]
         public DateTime DataCriacao { get; set; }
 
         /////<summary>
-        /////Lista de atividades do projeto.
+        /////Data conclusão do cadastro de novas atividades.
         /////</summary>
+        [Required]
         [DataMember]
-        public IList<AtividadesViewModel> Activities { get; set; }
+        public DateTime DataConclusao { get; set; }
+
+        /////<summary>
+        /////Responsável pela atividade.
+        /////</summary>
+        [Required]
+        [DataMember]
+        public Users Resposavel { get; set; }
 
     }
 }

@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
 {
-    public class ProjectsMap : IEntityTypeConfiguration<Projects>
+    public class ActivitiesMap : IEntityTypeConfiguration<Activities>
     {
-        public void Configure(EntityTypeBuilder<Projects> builder)
+        public void Configure(EntityTypeBuilder<Activities> builder)
         {
             builder
                .Property(e => e.Id)
@@ -28,12 +28,25 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
                 .HasColumnName("CreationDate");
 
             builder
-                .HasMany(a=>a.Activities)
-                .WithOne(p=> p.Projects)
+                .HasOne(a => a.Projects)
+                .WithMany(p => p.Activities)
                 .HasForeignKey(r => r.ProjectId);
 
             builder
-                .ToTable("Projects");
+                .HasOne(r => r.Resposavel)
+                .WithOne(a => a.Activities)
+                .HasForeignKey<Users>(s => s.Id);
+
+            builder
+                .Property(e => e.ProjectId)
+                .HasColumnName("ProjectId");
+
+            builder
+                .Property(e => e.UserId)
+                .HasColumnName("UserId");
+
+            builder
+                .ToTable("Activities");
         }
     }
 }

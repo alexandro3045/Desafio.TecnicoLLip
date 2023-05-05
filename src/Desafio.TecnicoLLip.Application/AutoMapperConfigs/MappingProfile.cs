@@ -24,6 +24,15 @@ namespace Desafio.TecnicoLLip.Application.AutoMapperConfigs
                 .ForMember(dest => dest.DataCriacao, opt => opt.MapFrom(src => src.CreationDate))
                 .ForMember(dest => dest.Descricao, opt => opt.MapFrom(src => src.Description))
                 .ForMember(dest => dest.Titulo, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Activities, opt => opt.MapFrom(src => src.Activities))
+                .ReverseMap();
+
+            CreateMap<Activities, AtividadesViewModel>()
+                .ForMember(dest => dest.DataCriacao, opt => opt.MapFrom(src => src.CreationDate))
+                .ForMember(dest => dest.DataConclusao, opt => opt.MapFrom(src => src.ConclusionDate))
+                .ForMember(dest => dest.Descricao, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Titulo, opt => opt.MapFrom(src => src.Title))
+                .ForMember(dest => dest.Resposavel, opt => opt.MapFrom(src => src.Resposavel))
                 .ReverseMap();
         }
     }

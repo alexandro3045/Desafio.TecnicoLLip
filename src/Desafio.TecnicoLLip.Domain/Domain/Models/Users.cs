@@ -1,5 +1,6 @@
 ﻿#region Includes
 using Desafio.TecnicoLLip.Domain.Models.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 #endregion
 
@@ -18,5 +19,7 @@ namespace Desafio.TecnicoLLip.Domain.Models
         [Required(AllowEmptyStrings = true)]
         [StringLength(400)]
         public string Password { get; set; }
+
+        public Activities Activities { get; set; }
     }
 }
