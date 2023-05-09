@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
-import GridProjects from "./grid.projects";
+import GridProjects from "./gridtree";
 
 type Props = {};
 
