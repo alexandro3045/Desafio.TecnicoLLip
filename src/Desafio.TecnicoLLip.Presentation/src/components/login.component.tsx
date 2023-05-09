@@ -70,6 +70,11 @@ export default class Login extends Component<Props, State> {
             error.response.data.message) ||
           error.message ||
           error.toString();
+          console.log('error:',resMessage);
+        this.setState({
+          loading: false,
+          message: resMessage
+        });
 
         this.setState({
           loading: false,
@@ -129,6 +134,7 @@ export default class Login extends Component<Props, State> {
               <div className="form-group">
                 <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
                   {loading && (
+                    // rome-ignore lint/style/useSelfClosingElements: <explanation>
                     <span className="spinner-border spinner-border-sm"></span>
                   )}
                   <span>Login</span>

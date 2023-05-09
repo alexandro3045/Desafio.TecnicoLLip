@@ -63,7 +63,7 @@ class App extends Component<Props, State> {
   }
 
   render() {
-    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
+    const { currentUser} = this.state;
 
     return (
       <div>
@@ -85,7 +85,7 @@ class App extends Component<Props, State> {
 
             {currentUser && (
                 <li className="nav-item">
-                    <Link to={"/projectlist"} className="nav-link">
+                    <Link to={"/project"} className="nav-link">
                         Projetos
                     </Link>
                 </li>
@@ -101,6 +101,7 @@ class App extends Component<Props, State> {
                 </Link>
               </li>
               <li className="nav-item">
+                {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
                 <a href="/login" className="nav-link" onClick={this.logOut}>
                   LogOut
                 </a>

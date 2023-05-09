@@ -38,24 +38,24 @@ export default class Project extends Component<Props, State> {
         titulo: Yup.string()
         .test(
           "len",
-          "O título deve ter entre 1 e 100 caracteres.",
+          "O t�tulo deve ter entre 1 e 100 caracteres.",
           (val: any) =>
             val &&
             val.toString().length >= 1 &&
             val.toString().length <= 100
         )
-        .required("Este campo é obrigatório!"),
+        .required("Este campo � obrigat�rio!"),
         descricao: Yup.string()
         .test(
             "len",
-            "A descrição deve ter entre 1 e 600 caracteres.",
+            "A descri��o deve ter entre 1 e 600 caracteres.",
             (val: any) =>
                 val &&
                 val.toString().length >= 1 &&
                 val.toString().length <= 600
         )
-        .required("Este campo é obrigatório!"),
-        datacriacao: Yup.date().required("Campo obrigatório"),
+        .required("Este campo � obrigat�rio!"),
+        datacriacao: Yup.date().required("Campo obrigat�rio"),
     });
   }
 
@@ -87,7 +87,7 @@ export default class Project extends Component<Props, State> {
             error.response.data.message) ||
           error.message ||
           error.toString();
-
+          console.log('error:',resMessage);
         this.setState({
           successful: false,
           message: resMessage
@@ -123,7 +123,7 @@ export default class Project extends Component<Props, State> {
               {!successful && (
                 <div>
                   <div className="form-group">
-                    <label htmlFor="titulo"> Título </label>
+                    <label htmlFor="titulo"> T�tulo </label>
                     <Field name="titulo" type="text" className="form-control" />
                     <ErrorMessage
                       name="titulo"
@@ -133,7 +133,7 @@ export default class Project extends Component<Props, State> {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="descricao"> Descrição </label>
+                    <label htmlFor="descricao"> Descri��o </label>
                     <Field 
                        name="descricao" 
                        type="text" 
@@ -147,7 +147,7 @@ export default class Project extends Component<Props, State> {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="datacriacao"> Data de criacão </label>
+                    <label htmlFor="datacriacao"> Data de criac��o </label>
                     <Field
                       name="datacriacao"
                       type="Date"

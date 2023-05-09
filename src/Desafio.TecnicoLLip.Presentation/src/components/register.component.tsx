@@ -83,7 +83,7 @@ export default class Register extends Component<Props, State> {
             error.response.data.message) ||
           error.message ||
           error.toString();
-
+          console.log('error:',resMessage);
         this.setState({
           successful: false,
           message: resMessage
