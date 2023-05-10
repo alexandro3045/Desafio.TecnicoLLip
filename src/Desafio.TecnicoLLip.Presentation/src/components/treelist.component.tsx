@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
-import GridProjects from "./grid.projects";
+import GridProjects from "./gridtree";
 
 type Props = {};
 
@@ -8,7 +8,7 @@ type Projects = { id: number, titulo: string, descricao: string, dataCriacao: Da
 
 type State = { data: Array<Projects>, redirect: string | null };
 
-export default class ProjectList extends Component<Props, State> {
+export default class TreeList extends Component<Props, State> {
   constructor(props: Props) {
 
     super(props);
@@ -44,11 +44,7 @@ export default class ProjectList extends Component<Props, State> {
 
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container"> 
-           <GridProjects/>          
-        </div>
-      </div>
+      <GridProjects/>          
     );
   }
 }

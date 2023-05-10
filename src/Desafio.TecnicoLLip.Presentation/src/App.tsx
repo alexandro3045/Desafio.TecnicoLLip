@@ -10,7 +10,7 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
 import BoardUser from "./components/board-user.component";
-import ProjectList from "./components/projectlist.component";
+import TreeList from "./components/treelist.component";
 import Project from "./components/project.component";
 
 import EventBus from "./common/EventBus";
@@ -131,7 +131,7 @@ class App extends Component<Props, State> {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
            <Route path="/user" element={<BoardUser />} />
-           <Route path="/projectlist" element={<ProjectList />} />
+           <Route path="/treelist" element={<TreeList />} />
            <Route path="/project" element={<Project />} />
           </Routes>
         </div>
