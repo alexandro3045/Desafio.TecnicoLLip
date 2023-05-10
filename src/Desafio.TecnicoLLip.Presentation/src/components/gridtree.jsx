@@ -156,7 +156,7 @@ const ToggleCell = ({
       }}
       {...restProps}
     >
-      <i
+      <icon
         role="button"
         tabIndex={0}
         aria-label={expanded ? 'Close' : 'Edit'}
@@ -166,6 +166,8 @@ const ToggleCell = ({
           'oi-pencil': !expanded,
         })}
         onClick={handleClick}
+        onKeyDown={handleClick}
+        onKeyPress={handleClick}
       />
     </td>
   );
@@ -343,7 +345,7 @@ export default () => {
         <TableTreeColumn
           for="Subject"
           showSelectionControls
-          showSelectAll
+          showSelectAll="true"
         />
         <TableRowDetail
           contentComponent={DetailContent}
