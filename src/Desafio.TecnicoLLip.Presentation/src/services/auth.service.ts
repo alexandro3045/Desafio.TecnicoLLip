@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
 
 const API_URL = "https://localhost:5001/api/";
@@ -5,7 +6,8 @@ const API_URL = "https://localhost:5001/api/";
 class AuthService {
   login(username: string, password: string) {
         return axios
-            .post(API_URL + "Logins", { email: username, senha: password 
+            // rome-ignore lint/style/useTemplate: <explanation>
+.post(API_URL + "Logins", { email: username, senha: password 
       })
       .then(response => {
           if (response.data.success) {
@@ -23,7 +25,8 @@ class AuthService {
   }
 
   register(username: string, email: string, password: string) {
-    return axios.post(API_URL + "signup", {
+    // rome-ignore lint/style/useTemplate: <explanation>
+return  axios.post(API_URL + "signup", {
       username,
       email,
       password

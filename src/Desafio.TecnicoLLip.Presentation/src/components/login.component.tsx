@@ -33,7 +33,7 @@ export default class Login extends Component<Props, State> {
     const currentUser = AuthService.getCurrentUser();
 
     if (currentUser) {
-      this.setState({ redirect: "/treelist" });
+      this.setState({ redirect: "/popup" });
     };
   }
 
@@ -60,7 +60,7 @@ export default class Login extends Component<Props, State> {
     AuthService.login(username, password).then(
       () => {
         this.setState({
-          redirect: "/treelist"
+          redirect: "/popup"
         });
       },
       error => {

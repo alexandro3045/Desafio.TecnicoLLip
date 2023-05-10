@@ -8,13 +8,16 @@ import {
   CustomTreeData, IntegratedFiltering, IntegratedPaging, IntegratedSorting, IntegratedSelection,
 } from '@devexpress/dx-react-grid';
 import {
-  Grid, TableRowDetail,
+  Grid, TableRowDetail,TableEditColumn,
   Table, TableHeaderRow, TableFilterRow, TableTreeColumn,
   PagingPanel, TableColumnResizing, Toolbar, TableColumnVisibility, ColumnChooser
 } from '@devexpress/dx-react-grid-bootstrap4';
 import {
   Container, Row, Col, Label, FormGroup, Input, Button
 } from 'reactstrap';
+
+
+
 import {
   Plugin, Template, TemplateConnector, TemplatePlaceholder, Action,
 } from '@devexpress/dx-react-core';
@@ -293,6 +296,7 @@ export default () => {
 
   return (
     <div>
+
       <Grid
         rows={rows}
         columns={columns}
@@ -301,11 +305,9 @@ export default () => {
           for={employeeColumns}
           formatterComponent={EmployeeFormatter}
         />
-        <RowDetailState
-          defaultExpandedRowIds={[1]}
-        />
+        <RowDetailState />
+
         <EditingState
-          defaultEditingRowIds={[1]}
           onCommitChanges={commitChanges}
         />
 
@@ -347,6 +349,10 @@ export default () => {
           contentComponent={DetailContent}
           cellComponent={DetailCell}
           toggleCellComponent={ToggleCell}
+        />
+        <TableEditColumn
+          showAddCommand
+          showEditCommand
         />
         <Toolbar />
         <ColumnChooser />
