@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
-import GridProjects from "./grid.projects";
+import GridProjects from "./treedata";
 
 type Props = {};
 
@@ -32,7 +32,7 @@ export default class ProjectList extends Component<Props, State> {
       error => {
         const resMessage =
           // rome-ignore lint/complexity/useOptionalChain: <explanation>
-(error.response &&
+         (error.response &&
             error.response.data &&
             error.response.data.message) ||
           error.message ||

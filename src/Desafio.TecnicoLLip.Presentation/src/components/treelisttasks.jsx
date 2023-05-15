@@ -45,29 +45,42 @@ export default () => {
           onEditorPreparing={onEditorPreparing}
           onInitNewRow={onInitNewRow}
         >
-          <Editing allowUpdating={true} allowDeleting={true} allowAdding={true} popup={popupOptions} mode="popup" />
+          <Editing 
+          allowUpdating={true} 
+          allowDeleting={true} 
+          allowAdding={true} 
+          popup={popupOptions} 
+          mode="popup" />
+
           <Column dataField="Full_Name">
             <ValidationRule type="required" />
           </Column>
+
           <Column dataField="Prefix" caption="Title">
             <ValidationRule type="required" />
           </Column>
+
           <Column visible={false} dataField="Head_ID" caption="Head">
             <Lookup dataSource={lookupData} valueExpr="ID" displayExpr="Full_Name" />
             <ValidationRule type="required" />
           </Column>
+
           <Column dataField="Title" caption="Position">
             <ValidationRule type="required" />
           </Column>
+
           <Column width={150} dataField="City">
             <ValidationRule type="required" />
           </Column>
+
           <Column width={120} dataField="Hire_Date" dataType="date">
             <ValidationRule type="required" />
           </Column>
+
           <Column type="buttons">
             <Button name="edit" />
             <Button name="delete" />
+            <Button name="add" />
           </Column>
         </TreeList>
     </div>

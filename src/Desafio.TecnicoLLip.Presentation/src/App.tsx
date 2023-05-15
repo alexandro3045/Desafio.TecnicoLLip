@@ -11,9 +11,10 @@ import Register from "./components/register.component";
 import Home from "./components/home.component";
 import BoardUser from "./components/board-user.component";
 import Popup from "./components/popup.component";
-import Project from "./components/project.component";
+import Project from "./components/projectlist.component";
 
 import EventBus from "./common/EventBus";
+import Treelist from "./components/popup.component";
 
 type Props = {};
 
@@ -66,7 +67,7 @@ class App extends Component<Props, State> {
     const { currentUser} = this.state;
 
     return (
-      <div>
+      <><link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.6/css/dx.light.css" /><div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -74,7 +75,7 @@ class App extends Component<Props, State> {
                 Home
               </Link>
             </li>
-                       
+
             {currentUser && (
               <li className="nav-item">
                 <Link to={"/register"} className="nav-link">
@@ -84,11 +85,11 @@ class App extends Component<Props, State> {
             )}
 
             {currentUser && (
-                <li className="nav-item">
-                    <Link to={"/project"} className="nav-link">
-                        Projetos
-                    </Link>
-                </li>
+              <li className="nav-item">
+                <Link to={"/Treelist"} className="nav-link">
+                  Projetos
+                </Link>
+              </li>
             )}
 
           </div>
@@ -130,14 +131,15 @@ class App extends Component<Props, State> {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-           <Route path="/user" element={<BoardUser />} />
-           <Route path="/popup" element={<Popup />} />
-           <Route path="/project" element={<Project />} />
+            <Route path="/user" element={<BoardUser />} />
+            <Route path="/popup" element={<Popup />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/projectlist" element={<Treelist />} />
           </Routes>
         </div>
 
-        { /*<AuthVerify logOut={this.logOut}/> */}
-      </div>
+        {/*<AuthVerify logOut={this.logOut}/> */}
+      </div></>
     );
   }
 }

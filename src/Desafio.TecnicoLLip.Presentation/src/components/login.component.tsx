@@ -33,7 +33,7 @@ export default class Login extends Component<Props, State> {
     const currentUser = AuthService.getCurrentUser();
 
     if (currentUser) {
-      this.setState({ redirect: "/popup" });
+      this.setState({ redirect: "/treelist" });
     };
   }
 
@@ -60,12 +60,13 @@ export default class Login extends Component<Props, State> {
     AuthService.login(username, password).then(
       () => {
         this.setState({
-          redirect: "/popup"
+          redirect: "/projectlist"
         });
       },
       error => {
         const resMessage =
-          (error.response &&
+          // rome-ignore lint/complexity/useOptionalChain: <explanation>
+(error.response &&
             error.response.data &&
             error.response.data.message) ||
           error.message ||

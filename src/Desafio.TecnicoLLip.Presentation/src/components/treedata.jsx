@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from 'react';
 import {
   DataTypeProvider,
@@ -10,7 +11,7 @@ import {
   PagingPanel, TableColumnResizing, Toolbar, TableColumnVisibility, ColumnChooser,
 } from '@devexpress/dx-react-grid-bootstrap3';
 
-import { tasks, employees, priorities } from '../common/tree-data copy';
+import { tasks, employees, priorities } from '../demo-data/tree-data';
 
 const EmployeeFormatter = ({ row }) => (
   <div

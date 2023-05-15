@@ -1,6 +1,6 @@
 import { Component } from "react";
 import ProjectService from "../services/project.service";
-import GridProjects from "./gridtree";
+import Treelista from "./treelisttasks";
 
 type Props = {};
 
@@ -44,7 +44,7 @@ export default class TreeList extends Component<Props, State> {
 
   render() {
     return (
-      <GridProjects/>          
+      <Treelista/>          
     );
   }
 }

@@ -1,4 +1,11 @@
 /* eslint-disable */
+export const status = [
+  { ID: 1, Value: 'Completed'}, 
+  { ID: 2, Value: 'In Progress'},
+  { ID: 3, Value: 'Need Assistance'},
+  { ID: 4, Value: 'In Progress'},
+  { ID: 5, Value: 'Deferred'}
+]
 
 export const tasks = [{
     "ID": 1,
@@ -7,7 +14,7 @@ export const tasks = [{
     "Subject": "Project Plans 2015",
     "Start_Date": "2015-01-01T00:00:00",
     "Due_Date": "2015-04-01T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 0
@@ -18,18 +25,30 @@ export const tasks = [{
     "Subject": "Project Health Insurance",
     "Start_Date": "2015-02-12T00:00:00",
     "Due_Date": "2015-05-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 75,
     "Parent_ID": 0
-  }, {
+  }, 
+  {
+    "ID": 29,
+    "Assigned_Employee_ID": 4,
+    "Owner_ID": 1,
+    "Subject": "Prepare 2015 Marketing Plan",
+    "Start_Date": "2015-01-01T00:00:00",
+    "Due_Date": "2015-01-31T00:00:00",
+    "Status": 1,
+    "Priority": 4,
+    "Completion": 100,
+    "Parent_ID": 1
+  },{
     "ID": 3,
     "Assigned_Employee_ID": 4,
     "Owner_ID": 4,
     "Subject": "Project New Brochures",
     "Start_Date": "2015-02-17T00:00:00",
     "Due_Date": "2015-03-01T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 0
@@ -40,7 +59,7 @@ export const tasks = [{
     "Subject": "Project Training",
     "Start_Date": "2015-03-02T00:00:00",
     "Due_Date": "2015-06-29T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 0
@@ -51,7 +70,7 @@ export const tasks = [{
     "Subject": "Project NDA",
     "Start_Date": "2015-03-12T00:00:00",
     "Due_Date": "2015-05-01T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 90,
     "Parent_ID": 0
@@ -62,7 +81,7 @@ export const tasks = [{
     "Subject": "Revenue Projections",
     "Start_Date": "2015-03-24T00:00:00",
     "Due_Date": "2015-04-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 0
@@ -73,7 +92,7 @@ export const tasks = [{
     "Subject": "Project TV Recall",
     "Start_Date": "2015-04-18T00:00:00",
     "Due_Date": "2016-02-04T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 90,
     "Parent_ID": 0
@@ -84,7 +103,7 @@ export const tasks = [{
     "Subject": "Project Overtime",
     "Start_Date": "2015-06-10T00:00:00",
     "Due_Date": "2015-06-20T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 0
@@ -95,7 +114,7 @@ export const tasks = [{
     "Subject": "Project Recall and Refund Forms",
     "Start_Date": "2015-06-17T00:00:00",
     "Due_Date": "2016-04-09T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 0
@@ -106,7 +125,7 @@ export const tasks = [{
     "Subject": "Project Shippers",
     "Start_Date": "2015-07-10T00:00:00",
     "Due_Date": "2016-04-11T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 0
@@ -117,7 +136,7 @@ export const tasks = [{
     "Subject": "Project Hardware Upgrade",
     "Start_Date": "2015-07-22T00:00:00",
     "Due_Date": "2016-05-01T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 95,
     "Parent_ID": 0
@@ -128,7 +147,7 @@ export const tasks = [{
     "Subject": "Project Touch-Enabled Apps",
     "Start_Date": "2015-08-05T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 90,
     "Parent_ID": 0
@@ -139,7 +158,7 @@ export const tasks = [{
     "Subject": "Online Sales",
     "Start_Date": "2015-08-20T00:00:00",
     "Due_Date": "2015-09-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 0
@@ -150,7 +169,7 @@ export const tasks = [{
     "Subject": "New Website Design",
     "Start_Date": "2015-09-17T00:00:00",
     "Due_Date": "2015-11-01T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 0
@@ -161,7 +180,7 @@ export const tasks = [{
     "Subject": "Bandwidth Increase",
     "Start_Date": "2015-11-01T00:00:00",
     "Due_Date": "2015-11-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 0
@@ -172,7 +191,7 @@ export const tasks = [{
     "Subject": "Support",
     "Start_Date": "2015-11-10T00:00:00",
     "Due_Date": "2015-11-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 0
@@ -183,7 +202,7 @@ export const tasks = [{
     "Subject": "Training Material",
     "Start_Date": "2015-11-14T00:00:00",
     "Due_Date": "2016-02-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 0
@@ -194,7 +213,7 @@ export const tasks = [{
     "Subject": "New Database",
     "Start_Date": "2015-12-24T00:00:00",
     "Due_Date": "2015-12-29T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 95,
     "Parent_ID": 0
@@ -205,7 +224,7 @@ export const tasks = [{
     "Subject": "New HDMI Specification",
     "Start_Date": "2016-01-02T00:00:00",
     "Due_Date": "2016-01-31T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 50,
     "Parent_ID": 0
@@ -216,7 +235,7 @@ export const tasks = [{
     "Subject": "Automation Server",
     "Start_Date": "2016-01-15T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 85,
     "Parent_ID": 0
@@ -227,7 +246,7 @@ export const tasks = [{
     "Subject": "Retail Sales",
     "Start_Date": "2016-01-20T00:00:00",
     "Due_Date": "2016-02-10T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 0
@@ -238,7 +257,7 @@ export const tasks = [{
     "Subject": "Reports",
     "Start_Date": "2016-03-13T00:00:00",
     "Due_Date": "2016-05-07T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 50,
     "Parent_ID": 0
@@ -249,7 +268,7 @@ export const tasks = [{
     "Subject": "Budget",
     "Start_Date": "2016-03-20T00:00:00",
     "Due_Date": "2016-04-01T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 30,
     "Parent_ID": 0
@@ -260,7 +279,7 @@ export const tasks = [{
     "Subject": "Shipping Labels",
     "Start_Date": "2016-04-01T00:00:00",
     "Due_Date": "2016-04-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 50,
     "Parent_ID": 0
@@ -271,7 +290,7 @@ export const tasks = [{
     "Subject": "New Warehouse",
     "Start_Date": "2016-04-05T00:00:00",
     "Due_Date": "2016-04-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 65,
     "Parent_ID": 0
@@ -282,7 +301,7 @@ export const tasks = [{
     "Subject": "Forklift",
     "Start_Date": "2016-04-07T00:00:00",
     "Due_Date": "2016-04-20T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 20,
     "Parent_ID": 0
@@ -293,7 +312,7 @@ export const tasks = [{
     "Subject": "Customer Follow Up Plan",
     "Start_Date": "2016-05-05T00:00:00",
     "Due_Date": "2016-05-11T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 40,
     "Parent_ID": 0
@@ -304,29 +323,18 @@ export const tasks = [{
     "Subject": "Prepare 2015 Financial",
     "Start_Date": "2015-01-15T00:00:00",
     "Due_Date": "2015-01-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 1
-  }, {
-    "ID": 29,
-    "Assigned_Employee_ID": 4,
-    "Owner_ID": 1,
-    "Subject": "Prepare 2015 Marketing Plan",
-    "Start_Date": "2015-01-01T00:00:00",
-    "Due_Date": "2015-01-31T00:00:00",
-    "Status": "Completed",
-    "Priority": 4,
-    "Completion": 100,
-    "Parent_ID": 1
-  }, {
+  },  {
     "ID": 30,
     "Assigned_Employee_ID": 2,
     "Owner_ID": 1,
     "Subject": "Review Health Insurance Options Under the Affordable Care Act",
     "Start_Date": "2015-02-12T00:00:00",
     "Due_Date": "2015-04-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 50,
     "Parent_ID": 2
@@ -337,7 +345,7 @@ export const tasks = [{
     "Subject": "Choose between PPO and HMO Health Plan",
     "Start_Date": "2015-02-15T00:00:00",
     "Due_Date": "2015-04-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 75,
     "Parent_ID": 2
@@ -348,7 +356,7 @@ export const tasks = [{
     "Subject": "Google AdWords Strategy",
     "Start_Date": "2015-02-16T00:00:00",
     "Due_Date": "2015-02-28T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 29
@@ -359,7 +367,7 @@ export const tasks = [{
     "Subject": "2015 Brochure Designs",
     "Start_Date": "2015-02-19T00:00:00",
     "Due_Date": "2015-02-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 3
@@ -370,7 +378,7 @@ export const tasks = [{
     "Subject": "Brochure Design Review",
     "Start_Date": "2015-02-19T00:00:00",
     "Due_Date": "2015-02-22T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 34
@@ -381,7 +389,7 @@ export const tasks = [{
     "Subject": "Website Re-Design Plan",
     "Start_Date": "2015-02-19T00:00:00",
     "Due_Date": "2015-02-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 34
@@ -392,7 +400,7 @@ export const tasks = [{
     "Subject": "Rollout of New Website and Marketing Brochures",
     "Start_Date": "2015-02-20T00:00:00",
     "Due_Date": "2015-02-28T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 3
@@ -403,7 +411,7 @@ export const tasks = [{
     "Subject": "Update Sales Strategy Documents",
     "Start_Date": "2015-02-20T00:00:00",
     "Due_Date": "2015-02-22T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 29
@@ -414,7 +422,7 @@ export const tasks = [{
     "Subject": "Create 2012 Sales Report",
     "Start_Date": "2015-02-20T00:00:00",
     "Due_Date": "2015-02-21T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 29
@@ -425,7 +433,7 @@ export const tasks = [{
     "Subject": "Direct vs Online Sales Comparison Report",
     "Start_Date": "2015-02-20T00:00:00",
     "Due_Date": "2015-02-22T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 29
@@ -436,7 +444,7 @@ export const tasks = [{
     "Subject": "Review 2012 Sales Report and Approve 2015 Plans",
     "Start_Date": "2015-02-23T00:00:00",
     "Due_Date": "2015-02-28T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 29
@@ -447,7 +455,7 @@ export const tasks = [{
     "Subject": "Deliver R&D Plans for 2015",
     "Start_Date": "2015-03-01T00:00:00",
     "Due_Date": "2015-03-10T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 1
@@ -458,7 +466,7 @@ export const tasks = [{
     "Subject": "Create 2015 R&D Plans",
     "Start_Date": "2015-03-01T00:00:00",
     "Due_Date": "2015-03-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 42
@@ -469,7 +477,7 @@ export const tasks = [{
     "Subject": "2015 QA Strategy Report",
     "Start_Date": "2015-03-02T00:00:00",
     "Due_Date": "2015-03-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 42
@@ -480,7 +488,7 @@ export const tasks = [{
     "Subject": "2015 Training Events",
     "Start_Date": "2015-03-02T00:00:00",
     "Due_Date": "2015-03-04T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 4
@@ -491,7 +499,7 @@ export const tasks = [{
     "Subject": "Non-Compete Agreements",
     "Start_Date": "2015-03-12T00:00:00",
     "Due_Date": "2015-03-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 1,
     "Completion": 100,
     "Parent_ID": 5
@@ -502,7 +510,7 @@ export const tasks = [{
     "Subject": "Update NDA Agreement",
     "Start_Date": "2015-03-14T00:00:00",
     "Due_Date": "2015-03-16T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 5
@@ -513,7 +521,7 @@ export const tasks = [{
     "Subject": "Update Employee Files with New NDA",
     "Start_Date": "2015-03-16T00:00:00",
     "Due_Date": "2015-03-26T00:00:00",
-    "Status": "Need Assistance",
+    "Status": 3,
     "Priority": 2,
     "Completion": 90,
     "Parent_ID": 5
@@ -524,7 +532,7 @@ export const tasks = [{
     "Subject": "Sign Updated NDA",
     "Start_Date": "2015-03-20T00:00:00",
     "Due_Date": "2015-03-25T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -535,7 +543,7 @@ export const tasks = [{
     "Subject": "Sign Updated NDA",
     "Start_Date": "2015-03-20T00:00:00",
     "Due_Date": "2015-03-25T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -546,7 +554,7 @@ export const tasks = [{
     "Subject": "Sign Updated NDA",
     "Start_Date": "2015-03-20T00:00:00",
     "Due_Date": "2015-03-25T00:00:00",
-    "Status": "Need Assistance",
+    "Status": 3,
     "Priority": 3,
     "Completion": 25,
     "Parent_ID": 5
@@ -557,7 +565,7 @@ export const tasks = [{
     "Subject": "Sign Updated NDA",
     "Start_Date": "2015-03-20T00:00:00",
     "Due_Date": "2015-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -568,7 +576,7 @@ export const tasks = [{
     "Subject": "Submit Questions Regarding New NDA",
     "Start_Date": "2015-03-21T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 5
@@ -579,7 +587,7 @@ export const tasks = [{
     "Subject": "Submit Questions Regarding New NDA",
     "Start_Date": "2015-03-21T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 5
@@ -590,7 +598,7 @@ export const tasks = [{
     "Subject": "Submit Questions Regarding New NDA",
     "Start_Date": "2015-03-21T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Need Assistance",
+    "Status": 3,
     "Priority": 4,
     "Completion": 25,
     "Parent_ID": 5
@@ -601,7 +609,7 @@ export const tasks = [{
     "Subject": "Submit Signed NDA",
     "Start_Date": "2015-03-22T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -612,7 +620,7 @@ export const tasks = [{
     "Subject": "Submit Signed NDA",
     "Start_Date": "2015-03-22T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -623,7 +631,7 @@ export const tasks = [{
     "Subject": "Submit Signed NDA",
     "Start_Date": "2015-03-22T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -634,7 +642,7 @@ export const tasks = [{
     "Subject": "Submit Signed NDA",
     "Start_Date": "2015-03-22T00:00:00",
     "Due_Date": "2015-03-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 5
@@ -645,7 +653,7 @@ export const tasks = [{
     "Subject": "Update Revenue Projections",
     "Start_Date": "2015-03-24T00:00:00",
     "Due_Date": "2015-04-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 6
@@ -656,7 +664,7 @@ export const tasks = [{
     "Subject": "Review Revenue Projections",
     "Start_Date": "2015-03-25T00:00:00",
     "Due_Date": "2015-04-06T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 6
@@ -667,7 +675,7 @@ export const tasks = [{
     "Subject": "Comment on Revenue Projections",
     "Start_Date": "2015-03-25T00:00:00",
     "Due_Date": "2015-04-03T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 6
@@ -678,7 +686,7 @@ export const tasks = [{
     "Subject": "Comment on Revenue Projections",
     "Start_Date": "2015-03-25T00:00:00",
     "Due_Date": "2015-04-03T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 6
@@ -689,7 +697,7 @@ export const tasks = [{
     "Subject": "Comment on Revenue Projections",
     "Start_Date": "2015-03-25T00:00:00",
     "Due_Date": "2015-04-03T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 3,
     "Completion": 25,
     "Parent_ID": 6
@@ -700,7 +708,7 @@ export const tasks = [{
     "Subject": "Provide New Health Insurance Docs",
     "Start_Date": "2015-03-28T00:00:00",
     "Due_Date": "2015-04-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 2
@@ -711,7 +719,7 @@ export const tasks = [{
     "Subject": "Review Changes to Health Insurance Coverage",
     "Start_Date": "2015-04-07T00:00:00",
     "Due_Date": "2015-04-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 2
@@ -722,7 +730,7 @@ export const tasks = [{
     "Subject": "Scan Health Insurance Forms",
     "Start_Date": "2015-04-15T00:00:00",
     "Due_Date": "2015-04-20T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 2
@@ -733,7 +741,7 @@ export const tasks = [{
     "Subject": "Sign Health Insurance Forms",
     "Start_Date": "2015-04-16T00:00:00",
     "Due_Date": "2015-04-19T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 2
@@ -744,7 +752,7 @@ export const tasks = [{
     "Subject": "Sign Health Insurance Forms",
     "Start_Date": "2015-04-16T00:00:00",
     "Due_Date": "2015-04-19T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 2
@@ -755,7 +763,7 @@ export const tasks = [{
     "Subject": "Sign Health Insurance Forms",
     "Start_Date": "2015-04-16T00:00:00",
     "Due_Date": "2015-04-19T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 2
@@ -766,7 +774,7 @@ export const tasks = [{
     "Subject": "Follow up with West Coast Stores",
     "Start_Date": "2015-04-18T00:00:00",
     "Due_Date": "2016-02-04T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 95,
     "Parent_ID": 7
@@ -777,7 +785,7 @@ export const tasks = [{
     "Subject": "Follow up with East Coast Stores",
     "Start_Date": "2015-04-18T00:00:00",
     "Due_Date": "2016-01-04T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 85,
     "Parent_ID": 7
@@ -788,7 +796,7 @@ export const tasks = [{
     "Subject": "Send Email to Customers about Recall",
     "Start_Date": "2015-04-18T00:00:00",
     "Due_Date": "2015-04-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 7
@@ -799,7 +807,7 @@ export const tasks = [{
     "Subject": "Submit Refund Report for 2015 Recall",
     "Start_Date": "2015-04-25T00:00:00",
     "Due_Date": "2015-05-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 7
@@ -810,7 +818,7 @@ export const tasks = [{
     "Subject": "Give Final Approval for Refunds",
     "Start_Date": "2015-05-05T00:00:00",
     "Due_Date": "2015-05-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 7
@@ -821,7 +829,7 @@ export const tasks = [{
     "Subject": "Prepare Product Recall Report",
     "Start_Date": "2015-05-10T00:00:00",
     "Due_Date": "2015-05-16T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 7
@@ -832,7 +840,7 @@ export const tasks = [{
     "Subject": "Review Product Recall Report by Engineering Team",
     "Start_Date": "2015-05-17T00:00:00",
     "Due_Date": "2015-05-20T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 7
@@ -843,7 +851,7 @@ export const tasks = [{
     "Subject": "Create Training Course for New TVs",
     "Start_Date": "2015-05-29T00:00:00",
     "Due_Date": "2015-06-29T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 4
@@ -854,7 +862,7 @@ export const tasks = [{
     "Subject": "Review Training Course for any Ommissions",
     "Start_Date": "2015-06-01T00:00:00",
     "Due_Date": "2015-06-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 4
@@ -865,7 +873,7 @@ export const tasks = [{
     "Subject": "Review Overtime Report",
     "Start_Date": "2015-06-10T00:00:00",
     "Due_Date": "2015-06-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 8
@@ -876,7 +884,7 @@ export const tasks = [{
     "Subject": "Submit Overtime Request Forms",
     "Start_Date": "2015-06-11T00:00:00",
     "Due_Date": "2015-06-12T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 8
@@ -887,7 +895,7 @@ export const tasks = [{
     "Subject": "Submit Overtime Request Forms",
     "Start_Date": "2015-06-11T00:00:00",
     "Due_Date": "2015-06-12T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 8
@@ -898,7 +906,7 @@ export const tasks = [{
     "Subject": "Submit Overtime Request Forms",
     "Start_Date": "2015-06-11T00:00:00",
     "Due_Date": "2015-06-12T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 8
@@ -909,7 +917,7 @@ export const tasks = [{
     "Subject": "Overtime Approval Guidelines",
     "Start_Date": "2015-06-15T00:00:00",
     "Due_Date": "2015-06-20T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 8
@@ -920,7 +928,7 @@ export const tasks = [{
     "Subject": "Refund Request Template",
     "Start_Date": "2015-06-17T00:00:00",
     "Due_Date": "2016-04-01T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 9
@@ -931,7 +939,7 @@ export const tasks = [{
     "Subject": "Recall Rebate Form",
     "Start_Date": "2015-06-17T00:00:00",
     "Due_Date": "2016-04-01T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 9
@@ -942,7 +950,7 @@ export const tasks = [{
     "Subject": "Create Report on Customer Feedback",
     "Start_Date": "2015-06-20T00:00:00",
     "Due_Date": "2015-06-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 9
@@ -953,7 +961,7 @@ export const tasks = [{
     "Subject": "Review Customer Feedback Report",
     "Start_Date": "2015-06-30T00:00:00",
     "Due_Date": "2015-07-03T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 9
@@ -964,7 +972,7 @@ export const tasks = [{
     "Subject": "Customer Feedback Report Analysis",
     "Start_Date": "2015-07-05T00:00:00",
     "Due_Date": "2016-04-09T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 9
@@ -975,7 +983,7 @@ export const tasks = [{
     "Subject": "Prepare Shipping Cost Analysis Report",
     "Start_Date": "2015-07-10T00:00:00",
     "Due_Date": "2015-07-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -986,7 +994,7 @@ export const tasks = [{
     "Subject": "Provide Feedback on Shippers",
     "Start_Date": "2015-07-11T00:00:00",
     "Due_Date": "2015-07-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -997,7 +1005,7 @@ export const tasks = [{
     "Subject": "Provide Feedback on Shippers",
     "Start_Date": "2015-07-11T00:00:00",
     "Due_Date": "2015-07-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -1008,7 +1016,7 @@ export const tasks = [{
     "Subject": "Provide Feedback on Shippers",
     "Start_Date": "2015-07-11T00:00:00",
     "Due_Date": "2015-07-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -1019,7 +1027,7 @@ export const tasks = [{
     "Subject": "Select Preferred Shipper",
     "Start_Date": "2015-07-16T00:00:00",
     "Due_Date": "2015-07-20T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -1030,7 +1038,7 @@ export const tasks = [{
     "Subject": "Complete Shipper Selection Form",
     "Start_Date": "2015-07-21T00:00:00",
     "Due_Date": "2016-04-11T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 4,
     "Completion": 0,
     "Parent_ID": 10
@@ -1041,7 +1049,7 @@ export const tasks = [{
     "Subject": "Upgrade Server Hardware",
     "Start_Date": "2015-07-22T00:00:00",
     "Due_Date": "2015-07-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 11
@@ -1052,7 +1060,7 @@ export const tasks = [{
     "Subject": "Upgrade Personal Computers",
     "Start_Date": "2015-07-24T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 85,
     "Parent_ID": 11
@@ -1063,7 +1071,7 @@ export const tasks = [{
     "Subject": "Approve Personal Computer Upgrade Plan",
     "Start_Date": "2015-07-24T00:00:00",
     "Due_Date": "2015-07-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 11
@@ -1074,7 +1082,7 @@ export const tasks = [{
     "Subject": "Decide on Mobile Devices to Use in the Field",
     "Start_Date": "2015-07-30T00:00:00",
     "Due_Date": "2015-08-02T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 11
@@ -1085,7 +1093,7 @@ export const tasks = [{
     "Subject": "Upgrade Apps to Windows RT or stay with WinForms",
     "Start_Date": "2015-08-01T00:00:00",
     "Due_Date": "2015-08-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 12
@@ -1096,7 +1104,7 @@ export const tasks = [{
     "Subject": "Estimate Time Required to Touch-Enable Apps",
     "Start_Date": "2015-08-05T00:00:00",
     "Due_Date": "2015-08-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 12
@@ -1107,7 +1115,7 @@ export const tasks = [{
     "Subject": "Report on Tranistion to Touch-Based Apps",
     "Start_Date": "2015-08-10T00:00:00",
     "Due_Date": "2015-08-11T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 12
@@ -1118,7 +1126,7 @@ export const tasks = [{
     "Subject": "Try New Touch-Enabled WinForms Apps",
     "Start_Date": "2015-08-11T00:00:00",
     "Due_Date": "2015-08-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 12
@@ -1129,7 +1137,7 @@ export const tasks = [{
     "Subject": "Rollout New Touch-Enabled WinForms Apps",
     "Start_Date": "2015-08-17T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 75,
     "Parent_ID": 12
@@ -1140,7 +1148,7 @@ export const tasks = [{
     "Subject": "Site Up-Time Report",
     "Start_Date": "2015-08-20T00:00:00",
     "Due_Date": "2015-08-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 13
@@ -1151,7 +1159,7 @@ export const tasks = [{
     "Subject": "Review Site Up-Time Report",
     "Start_Date": "2015-08-24T00:00:00",
     "Due_Date": "2015-08-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 13
@@ -1162,7 +1170,7 @@ export const tasks = [{
     "Subject": "Review Online Sales Report",
     "Start_Date": "2015-08-30T00:00:00",
     "Due_Date": "2015-09-04T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 13
@@ -1173,7 +1181,7 @@ export const tasks = [{
     "Subject": "Determine New Online Marketing Strategy",
     "Start_Date": "2015-09-03T00:00:00",
     "Due_Date": "2015-09-10T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 13
@@ -1184,7 +1192,7 @@ export const tasks = [{
     "Subject": "New Online Marketing Strategy",
     "Start_Date": "2015-09-05T00:00:00",
     "Due_Date": "2015-09-11T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 13
@@ -1195,7 +1203,7 @@ export const tasks = [{
     "Subject": "Approve New Online Marketing Strategy",
     "Start_Date": "2015-09-15T00:00:00",
     "Due_Date": "2015-09-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 13
@@ -1206,7 +1214,7 @@ export const tasks = [{
     "Subject": "Submit New Website Design",
     "Start_Date": "2015-09-17T00:00:00",
     "Due_Date": "2015-09-22T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 14
@@ -1217,7 +1225,7 @@ export const tasks = [{
     "Subject": "Create Icons for Website",
     "Start_Date": "2015-09-17T00:00:00",
     "Due_Date": "2015-09-21T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 111
@@ -1228,7 +1236,7 @@ export const tasks = [{
     "Subject": "Review PSDs for New Website",
     "Start_Date": "2015-09-23T00:00:00",
     "Due_Date": "2015-10-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 111
@@ -1239,7 +1247,7 @@ export const tasks = [{
     "Subject": "Create New Shopping Cart",
     "Start_Date": "2015-09-24T00:00:00",
     "Due_Date": "2015-10-01T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 113
@@ -1250,7 +1258,7 @@ export const tasks = [{
     "Subject": "Create New Product Pages",
     "Start_Date": "2015-09-24T00:00:00",
     "Due_Date": "2015-10-04T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 113
@@ -1261,7 +1269,7 @@ export const tasks = [{
     "Subject": "Review New Product Pages",
     "Start_Date": "2015-10-04T00:00:00",
     "Due_Date": "2015-10-10T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 113
@@ -1272,7 +1280,7 @@ export const tasks = [{
     "Subject": "Approve Website Launch",
     "Start_Date": "2015-10-10T00:00:00",
     "Due_Date": "2015-10-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 113
@@ -1283,7 +1291,7 @@ export const tasks = [{
     "Subject": "Launch New Website",
     "Start_Date": "2015-10-15T00:00:00",
     "Due_Date": "2015-10-16T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 111
@@ -1294,7 +1302,7 @@ export const tasks = [{
     "Subject": "Update Customer Shipping Profiles",
     "Start_Date": "2015-10-20T00:00:00",
     "Due_Date": "2015-10-22T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 14
@@ -1305,7 +1313,7 @@ export const tasks = [{
     "Subject": "Create New Shipping Return Labels",
     "Start_Date": "2015-10-21T00:00:00",
     "Due_Date": "2015-10-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 119
@@ -1316,7 +1324,7 @@ export const tasks = [{
     "Subject": "Get Design for Shipping Return Labels",
     "Start_Date": "2015-10-21T00:00:00",
     "Due_Date": "2015-10-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 119
@@ -1327,7 +1335,7 @@ export const tasks = [{
     "Subject": "PSD needed for Shipping Return Labels",
     "Start_Date": "2015-10-22T00:00:00",
     "Due_Date": "2015-10-27T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 119
@@ -1338,7 +1346,7 @@ export const tasks = [{
     "Subject": "Request Bandwidth Increase from ISP",
     "Start_Date": "2015-11-01T00:00:00",
     "Due_Date": "2015-11-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 15
@@ -1349,7 +1357,7 @@ export const tasks = [{
     "Subject": "Submit D&B Number to ISP for Credit Approval",
     "Start_Date": "2015-11-04T00:00:00",
     "Due_Date": "2015-11-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 15
@@ -1360,7 +1368,7 @@ export const tasks = [{
     "Subject": "Contact ISP and Discuss Payment Options",
     "Start_Date": "2015-11-05T00:00:00",
     "Due_Date": "2015-11-06T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 15
@@ -1371,7 +1379,7 @@ export const tasks = [{
     "Subject": "Prepare Year-End Support Summary Report",
     "Start_Date": "2015-11-10T00:00:00",
     "Due_Date": "2015-11-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 16
@@ -1382,7 +1390,7 @@ export const tasks = [{
     "Subject": "Analyze Support Traffic for 2015",
     "Start_Date": "2015-11-11T00:00:00",
     "Due_Date": "2015-11-14T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 16
@@ -1393,7 +1401,7 @@ export const tasks = [{
     "Subject": "Review New Training Material",
     "Start_Date": "2015-11-14T00:00:00",
     "Due_Date": "2015-11-18T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 17
@@ -1404,7 +1412,7 @@ export const tasks = [{
     "Subject": "Distribute Training Material to Support Staff",
     "Start_Date": "2015-11-18T00:00:00",
     "Due_Date": "2015-11-30T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 17
@@ -1415,7 +1423,7 @@ export const tasks = [{
     "Subject": "Training Material Distribution Schedule",
     "Start_Date": "2015-11-30T00:00:00",
     "Due_Date": "2015-12-02T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 17
@@ -1426,7 +1434,7 @@ export const tasks = [{
     "Subject": "Provide New Artwork to Support Team",
     "Start_Date": "2015-12-03T00:00:00",
     "Due_Date": "2015-12-04T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 17
@@ -1437,7 +1445,7 @@ export const tasks = [{
     "Subject": "Publish New Art on the Server",
     "Start_Date": "2015-12-03T00:00:00",
     "Due_Date": "2015-12-04T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 131
@@ -1448,7 +1456,7 @@ export const tasks = [{
     "Subject": "Replace Old Artwork with New Artwork",
     "Start_Date": "2015-12-07T00:00:00",
     "Due_Date": "2015-12-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 131
@@ -1459,7 +1467,7 @@ export const tasks = [{
     "Subject": "Replace Old Artwork with New Artwork",
     "Start_Date": "2015-12-07T00:00:00",
     "Due_Date": "2015-12-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 131
@@ -1470,7 +1478,7 @@ export const tasks = [{
     "Subject": "Replace Old Artwork with New Artwork",
     "Start_Date": "2015-12-07T00:00:00",
     "Due_Date": "2015-12-15T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 131
@@ -1481,7 +1489,7 @@ export const tasks = [{
     "Subject": "Ship New Brochures to Field",
     "Start_Date": "2015-12-19T00:00:00",
     "Due_Date": "2015-12-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 17
@@ -1492,7 +1500,7 @@ export const tasks = [{
     "Subject": "Ship Brochures to Todd Hoffman",
     "Start_Date": "2015-12-23T00:00:00",
     "Due_Date": "2015-12-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 17
@@ -1503,7 +1511,7 @@ export const tasks = [{
     "Subject": "Update Server with Service Packs",
     "Start_Date": "2015-12-24T00:00:00",
     "Due_Date": "2015-12-24T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 3,
     "Completion": 100,
     "Parent_ID": 18
@@ -1514,7 +1522,7 @@ export const tasks = [{
     "Subject": "Install New Database",
     "Start_Date": "2015-12-27T00:00:00",
     "Due_Date": "2015-12-28T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 18
@@ -1525,7 +1533,7 @@ export const tasks = [{
     "Subject": "Approve Overtime for HR",
     "Start_Date": "2015-12-29T00:00:00",
     "Due_Date": "2015-12-29T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 18
@@ -1536,7 +1544,7 @@ export const tasks = [{
     "Subject": "Review New HDMI Specification",
     "Start_Date": "2016-01-02T00:00:00",
     "Due_Date": "2016-01-31T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 50,
     "Parent_ID": 19
@@ -1547,7 +1555,7 @@ export const tasks = [{
     "Subject": "Approval on Converting to New HDMI Specification",
     "Start_Date": "2016-01-11T00:00:00",
     "Due_Date": "2016-01-31T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 75,
     "Parent_ID": 19
@@ -1558,7 +1566,7 @@ export const tasks = [{
     "Subject": "Create New Spike for Automation Server",
     "Start_Date": "2016-01-15T00:00:00",
     "Due_Date": "2016-01-27T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 20
@@ -1569,7 +1577,7 @@ export const tasks = [{
     "Subject": "Report on Retail Sales Strategy for 2016",
     "Start_Date": "2016-01-20T00:00:00",
     "Due_Date": "2016-01-31T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 21
@@ -1580,7 +1588,7 @@ export const tasks = [{
     "Subject": "Code Review - New Automation Server",
     "Start_Date": "2016-01-27T00:00:00",
     "Due_Date": "2016-02-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 75,
     "Parent_ID": 20
@@ -1591,7 +1599,7 @@ export const tasks = [{
     "Subject": "Feedback on New Training Course",
     "Start_Date": "2016-01-28T00:00:00",
     "Due_Date": "2016-02-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 17
@@ -1602,7 +1610,7 @@ export const tasks = [{
     "Subject": "Send Monthly Invoices from Shippers",
     "Start_Date": "2016-02-01T00:00:00",
     "Due_Date": "2016-02-07T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 10
@@ -1613,7 +1621,7 @@ export const tasks = [{
     "Subject": "Schedule Meeting with Sales Team",
     "Start_Date": "2016-02-07T00:00:00",
     "Due_Date": "2016-02-09T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 21
@@ -1624,7 +1632,7 @@ export const tasks = [{
     "Subject": "Confirm Availability for Sales Meeting",
     "Start_Date": "2016-02-09T00:00:00",
     "Due_Date": "2016-02-09T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 21
@@ -1635,7 +1643,7 @@ export const tasks = [{
     "Subject": "Reschedule Sales Team Meeting",
     "Start_Date": "2016-02-10T00:00:00",
     "Due_Date": "2016-02-10T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 21
@@ -1646,7 +1654,7 @@ export const tasks = [{
     "Subject": "Update Database with New Leads",
     "Start_Date": "2016-03-01T00:00:00",
     "Due_Date": "2016-03-10T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 80,
     "Parent_ID": 18
@@ -1657,7 +1665,7 @@ export const tasks = [{
     "Subject": "Send Territory Sales Breakdown",
     "Start_Date": "2016-03-13T00:00:00",
     "Due_Date": "2016-03-16T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 50,
     "Parent_ID": 22
@@ -1668,7 +1676,7 @@ export const tasks = [{
     "Subject": "Territory Sales Breakdown Report",
     "Start_Date": "2016-03-17T00:00:00",
     "Due_Date": "2016-03-17T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 3,
     "Completion": 50,
     "Parent_ID": 22
@@ -1679,7 +1687,7 @@ export const tasks = [{
     "Subject": "Return Merchandise Report",
     "Start_Date": "2016-03-17T00:00:00",
     "Due_Date": "2016-03-18T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 25,
     "Parent_ID": 22
@@ -1712,7 +1720,7 @@ export const tasks = [{
     "Subject": "Review HR Budget Company Wide",
     "Start_Date": "2016-03-20T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 40,
     "Parent_ID": 23
@@ -1723,7 +1731,7 @@ export const tasks = [{
     "Subject": "Sales Dept Budget Request Report",
     "Start_Date": "2016-03-23T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 75,
     "Parent_ID": 23
@@ -1734,7 +1742,7 @@ export const tasks = [{
     "Subject": "Support Dept Budget Report",
     "Start_Date": "2016-03-23T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 60,
     "Parent_ID": 23
@@ -1745,7 +1753,7 @@ export const tasks = [{
     "Subject": "IT Dept Budget Request Report",
     "Start_Date": "2016-03-23T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 30,
     "Parent_ID": 23
@@ -1756,7 +1764,7 @@ export const tasks = [{
     "Subject": "Engineering Dept Budget Request Report",
     "Start_Date": "2016-03-23T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 4,
     "Completion": 0,
     "Parent_ID": 23
@@ -1767,7 +1775,7 @@ export const tasks = [{
     "Subject": "1Q Travel Spend Report",
     "Start_Date": "2016-03-24T00:00:00",
     "Due_Date": "2016-03-25T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 30,
     "Parent_ID": 23
@@ -1778,7 +1786,7 @@ export const tasks = [{
     "Subject": "Approve Benefits Upgrade Package",
     "Start_Date": "2016-03-26T00:00:00",
     "Due_Date": "2016-03-27T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 23
@@ -1789,7 +1797,7 @@ export const tasks = [{
     "Subject": "Final Budget Review",
     "Start_Date": "2016-03-26T00:00:00",
     "Due_Date": "2016-03-27T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 25,
     "Parent_ID": 23
@@ -1800,7 +1808,7 @@ export const tasks = [{
     "Subject": "State of Operations Report",
     "Start_Date": "2016-03-28T00:00:00",
     "Due_Date": "2016-03-31T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 45,
     "Parent_ID": 22
@@ -1811,7 +1819,7 @@ export const tasks = [{
     "Subject": "Online Sales Report",
     "Start_Date": "2016-03-29T00:00:00",
     "Due_Date": "2016-03-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 55,
     "Parent_ID": 22
@@ -1822,7 +1830,7 @@ export const tasks = [{
     "Subject": "Reprint All Shipping Labels",
     "Start_Date": "2016-04-01T00:00:00",
     "Due_Date": "2016-04-10T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 10,
     "Parent_ID": 24
@@ -1833,7 +1841,7 @@ export const tasks = [{
     "Subject": "Shipping Label Artwork",
     "Start_Date": "2016-04-02T00:00:00",
     "Due_Date": "2016-04-09T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 40,
     "Parent_ID": 24
@@ -1844,7 +1852,7 @@ export const tasks = [{
     "Subject": "Specs for New Shipping Label",
     "Start_Date": "2016-04-04T00:00:00",
     "Due_Date": "2016-04-05T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 2,
     "Completion": 100,
     "Parent_ID": 24
@@ -1855,7 +1863,7 @@ export const tasks = [{
     "Subject": "Move Packaging Materials to New Warehouse",
     "Start_Date": "2016-04-05T00:00:00",
     "Due_Date": "2016-04-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 60,
     "Parent_ID": 25
@@ -1866,7 +1874,7 @@ export const tasks = [{
     "Subject": "Move Inventory to New Warehouse",
     "Start_Date": "2016-04-05T00:00:00",
     "Due_Date": "2016-04-15T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 70,
     "Parent_ID": 25
@@ -1877,7 +1885,7 @@ export const tasks = [{
     "Subject": "Take Forklift to Service Center",
     "Start_Date": "2016-04-07T00:00:00",
     "Due_Date": "2016-04-18T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 60,
     "Parent_ID": 26
@@ -1888,7 +1896,7 @@ export const tasks = [{
     "Subject": "Approve Rental of Forklift",
     "Start_Date": "2016-04-08T00:00:00",
     "Due_Date": "2016-04-09T00:00:00",
-    "Status": "Need Assistance",
+    "Status": 3,
     "Priority": 4,
     "Completion": 0,
     "Parent_ID": 26
@@ -1899,7 +1907,7 @@ export const tasks = [{
     "Subject": "Give Final Approval to Rent Forklift",
     "Start_Date": "2016-04-08T00:00:00",
     "Due_Date": "2016-04-08T00:00:00",
-    "Status": "Need Assistance",
+    "Status": 3,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 26
@@ -1910,7 +1918,7 @@ export const tasks = [{
     "Subject": "Review Complaint Reports",
     "Start_Date": "2016-04-17T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 4,
     "Completion": 40,
     "Parent_ID": 22
@@ -1921,7 +1929,7 @@ export const tasks = [{
     "Subject": "Review Website Complaint Reports",
     "Start_Date": "2016-04-18T00:00:00",
     "Due_Date": "2016-04-24T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 65,
     "Parent_ID": 22
@@ -1932,7 +1940,7 @@ export const tasks = [{
     "Subject": "Test New Automation App",
     "Start_Date": "2016-04-20T00:00:00",
     "Due_Date": "2016-04-30T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 80,
     "Parent_ID": 20
@@ -1943,7 +1951,7 @@ export const tasks = [{
     "Subject": "Fix Synchronization Issues",
     "Start_Date": "2016-04-21T00:00:00",
     "Due_Date": "2016-04-21T00:00:00",
-    "Status": "Completed",
+    "Status": 1,
     "Priority": 4,
     "Completion": 100,
     "Parent_ID": 20
@@ -1965,7 +1973,7 @@ export const tasks = [{
     "Subject": "Support Team Evaluation Report",
     "Start_Date": "2016-05-01T00:00:00",
     "Due_Date": "2016-05-07T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 22
@@ -1976,7 +1984,7 @@ export const tasks = [{
     "Subject": "Review New Customer Follow Up Plan",
     "Start_Date": "2016-05-05T00:00:00",
     "Due_Date": "2016-05-11T00:00:00",
-    "Status": "In Progress",
+    "Status": 2,
     "Priority": 2,
     "Completion": 75,
     "Parent_ID": 27
@@ -1987,13 +1995,13 @@ export const tasks = [{
     "Subject": "Submit Customer Follow Up Plan Feedback",
     "Start_Date": "2016-05-06T00:00:00",
     "Due_Date": "2016-05-10T00:00:00",
-    "Status": "Deferred",
+    "Status": 5,
     "Priority": 2,
     "Completion": 0,
     "Parent_ID": 27
   }];
   
-    export const employees = [{
+export const employees = [{
     "ID": 1,
     "Name": "John Heart",
     "Picture": "images/employees/01.png"
@@ -2198,7 +2206,7 @@ export const tasks = [{
     "Name": "Stu Pizaro"
   }];
   
-  export const priorities = [
+export const priorities = [
     { "ID": 1, "Value": "Low" },
     { "ID": 2, "Value": "Normal" },
     { "ID": 3, "Value": "Urgent" },
