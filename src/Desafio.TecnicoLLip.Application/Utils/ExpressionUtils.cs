@@ -19,15 +19,6 @@ namespace Desafio.TecnicoLLip.Application.Utils
         }
     }
 
-    public static class EnumerableExtensions
-    {
-        public static IEnumerable<T> Appends<T>(
-            this IEnumerable<T> source, params T[] tail)
-        {
-            return source.Concat(tail);
-        }
-    }
-
     public static class IEnumerableExtensions
     {
         public static Task ParallelForEachAsync<T>(this IEnumerable<T> source, Func<T, Task> funcBody, int maxDoP = 4)

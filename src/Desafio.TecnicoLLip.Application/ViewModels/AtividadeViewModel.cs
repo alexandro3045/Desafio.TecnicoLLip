@@ -1,22 +1,15 @@
 ﻿#region Includes
-using Desafio.TecnicoLLip.Application.ViewModels.Base;
 using Desafio.TecnicoLLip.Domain.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Desafio.TecnicoLLip.Application.ViewModels.Enums;
 #endregion
 
 namespace Desafio.TecnicoLLip.Application.ViewModels
 {
-    public class AtividadesViewModel : Base.Base
+    public class AtividadeViewModel : Base.BaseViewModel<int>
     {
-        /////<summary>
-        /////Id do cadastro de novas atividades.
-        /////</summary>
-        [Required]
-        [DataMember]
-        public int Id { get; set; }
-
         /////<summary>
         /////Título do cadastro de novas atividades.
         /////</summary>
@@ -54,5 +47,11 @@ namespace Desafio.TecnicoLLip.Application.ViewModels
         [DataMember]
         public Users Resposavel { get; set; }
 
-    }
+        /////<summary>
+        /////Status da atividade.
+        /////</summary>
+        [Required]
+        [DataMember]
+        public EnumStatusViewModel Status { get; set; } = EnumStatusViewModel.Pendente;
+    }    
 }

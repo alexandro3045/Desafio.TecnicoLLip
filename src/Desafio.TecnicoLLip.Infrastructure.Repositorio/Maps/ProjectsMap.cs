@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
 {
-    public class ProjectsMap : IEntityTypeConfiguration<Projects>
+    public class ProjectsMap : IEntityTypeConfiguration<Project>
     {
-        public void Configure(EntityTypeBuilder<Projects> builder)
+        public void Configure(EntityTypeBuilder<Project> builder)
         {
             builder
                .Property(e => e.Id)
@@ -29,7 +29,7 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
 
             builder
                 .HasMany(a=>a.Activities)
-                .WithOne(p=> p.Projects)
+                .WithOne(p=> p.Project)
                 .HasForeignKey(r => r.ProjectId);
 
             builder

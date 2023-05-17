@@ -206,7 +206,7 @@ namespace Desafio.TecnicoLLip.API.Query
                 {
                     success = true,
                     data = retorno,
-                    totalCount = retorno.Count()
+                    totalCount = retorno?.Count()
                 })
                 : (IActionResult)NoContent();
         }

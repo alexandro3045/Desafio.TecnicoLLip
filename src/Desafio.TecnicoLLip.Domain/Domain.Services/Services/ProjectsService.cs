@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Desafio.TecnicoLLip.Domain.Services.Services
 {
-    public class ProjectsService : BaseService<Projects>, IProjectsService
+    public class ProjectsService : BaseService<Project>, IProjectsService
     {
         public ProjectsService(IProjectsRepository repository, ProjectsValidator validator) : base(repository, validator) { }
     }

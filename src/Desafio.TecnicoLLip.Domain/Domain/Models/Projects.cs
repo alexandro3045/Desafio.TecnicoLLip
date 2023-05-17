@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Desafio.TecnicoLLip.Domain.Models
 {
-    public class Projects : BaseModel<int>
+    public class Project : BaseModel<int>
     {
       [Required(AllowEmptyStrings = true)]
       [StringLength(100)]

@@ -17,7 +17,7 @@
     <DocumentationFile>bin\Desafio.TecnicoLLip.API.xml</DocumentationFile>
     <OutputPath>bin\</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <WarningLevel>0</WarningLevel>
+    <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>

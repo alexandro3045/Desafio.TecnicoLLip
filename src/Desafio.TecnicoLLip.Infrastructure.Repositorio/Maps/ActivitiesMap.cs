@@ -2,6 +2,7 @@
 using Desafio.TecnicoLLip.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Desafio.TecnicoLLip.Domain.Models.Utility;
 #endregion
 
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
@@ -28,7 +29,7 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
                 .HasColumnName("CreationDate");
 
             builder
-                .HasOne(a => a.Projects)
+                .HasOne(a => a.Project)
                 .WithMany(p => p.Activities)
                 .HasForeignKey(r => r.ProjectId);
 
@@ -44,6 +45,15 @@ namespace Desafio.TecnicoLLip.Infrastructure.Data.Maps
             builder
                 .Property(e => e.UserId)
                 .HasColumnName("UserId");
+
+            builder
+              .Property(e => e.Status)
+              .HasColumnName("Status")
+              .HasMaxLength(1)
+              .HasConversion(
+                  v => v.Id,
+                  v => (EnumStatus)Enums<char?>.Parse<EnumStatus>(v))
+              .IsUnicode(false);                
 
             builder
                 .ToTable("Activities");

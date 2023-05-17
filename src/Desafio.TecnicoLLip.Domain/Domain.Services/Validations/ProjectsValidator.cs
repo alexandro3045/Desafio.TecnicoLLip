@@ -6,7 +6,7 @@ using FluentValidation;
 
 namespace Desafio.TecnicoLLip.Domain.Services.Validations
 {
-    public class ProjectsValidator : AbstractValidator<Projects>
+    public class ProjectsValidator : AbstractValidator<Project>
     {
         public ProjectsValidator()
         {

@@ -1,10 +1,9 @@
 ﻿#region Includes
-using Desafio.TecnicoLLip.Application.ViewModels.Base;
-using Desafio.TecnicoLLip.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using Desafio.TecnicoLLip.Application.ViewModels.Enums;
 #endregion
 
 namespace Desafio.TecnicoLLip.Application.ViewModels
@@ -45,7 +44,14 @@ namespace Desafio.TecnicoLLip.Application.ViewModels
         /////Lista de atividades do projeto.
         /////</summary>
         [DataMember]
-        public IList<AtividadesViewModel> Activities { get; set; }
+        public IList<AtividadeViewModel> Tarefas { get; set; }
+
+        /////<summary>
+        /////Status da atividade.
+        /////</summary>
+        [Required]
+        [DataMember]
+        public EnumStatusViewModel Status { get; set; } = EnumStatusViewModel.Pendente;
 
     }
 }

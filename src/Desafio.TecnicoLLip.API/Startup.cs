@@ -4,9 +4,7 @@ using EntityFramework.Triggers;
 using Desafio.TecnicoLLip.API.Settings;
 using Desafio.TecnicoLLip.Application.AutoMapperConfigs;
 using Desafio.TecnicoLLip.Application.Interfaces;
-using Desafio.TecnicoLLip.Application.Services;
 using Desafio.TecnicoLLip.Infrastructure.CrossCutting;
-using Desafio.TecnicoLLip.Infrastructure.Data.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -19,9 +17,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Diagnostics;
 using ControllersOptions = Desafio.TecnicoLLip.API.Settings.ControllersOptions;
-using Desafio.TecnicoLLip.Infrastructure.Data.Contextos;
 
 using Desafio.TecnicoLLip.Infrastructure.Data.Contextos.Corporativo;
 #endregion
@@ -41,8 +37,6 @@ namespace Desafio.TecnicoLLip.API
             Configuration = configuration;
 
             Environment = environment;
-
-           // EmailAppService = emailAppService;
         }
 
         /// <summary>

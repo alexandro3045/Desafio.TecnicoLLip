@@ -9,7 +9,7 @@ using Desafio.TecnicoLLip.Domain.Models;
 
 namespace Desafio.TecnicoLLip.Application.Services
 {
-    public class ProjetoAppService : BaseAppService<Projects, ProjetoViewModel>, IProjetoAppService
+    public class ProjetoAppService : BaseAppService<Project, ProjetoViewModel>, IProjetoAppService
     {
         public static readonly string[] includes = { "Activities", "Activities.Resposavel" };
         public ProjetoAppService(IMapper mapper, IProjectsService projectsService) : base(mapper, projectsService, includes) { }

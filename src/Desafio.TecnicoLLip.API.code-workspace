@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "Desafio.TecnicoLLip.API"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Application"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Presentation"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Domain"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Infrastructure.CrossCutting"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Infrastructure.Repositorio"
+		},
+		{
+			"path": "Desafio.TecnicoLLip.Tests"
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+		{
+			"name": ".NET Core Attach",
+			"type": "coreclr",
+			"request": "attach"
+		}
+		]
+	}
+}

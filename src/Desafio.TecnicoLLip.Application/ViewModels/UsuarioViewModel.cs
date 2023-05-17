@@ -1,6 +1,5 @@
 ﻿#region Includes
 using Desafio.TecnicoLLip.Application.ViewModels.Base;
-using Desafio.TecnicoLLip.Domain.Models.Utility;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 #endregion

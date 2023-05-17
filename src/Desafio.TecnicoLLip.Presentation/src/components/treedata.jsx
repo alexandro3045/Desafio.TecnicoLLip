@@ -58,6 +58,7 @@ export default () => {
     { name: 'Start_Date', title: 'Start Date', getCellValue: row => row.Start_Date.split('T')[0] },
     { name: 'Due_Date', title: 'Due Date', getCellValue: row => row.Due_Date.split('T')[0] },
   ]);
+  
   const [rows] = useState(tasks);
   const [pageSizes] = useState([5, 10, 20]);
   const [defaultColumnWidths] = useState([

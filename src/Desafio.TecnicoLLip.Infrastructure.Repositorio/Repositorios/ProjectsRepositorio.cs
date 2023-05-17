@@ -7,7 +7,7 @@ using Desafio.TecnicoLLip.Infrastructure.Data.Repositorios.Base;
 
 namespace Desafio.TecnicoLLip.Infrastructure.Data.Repositorios
 {
-    public class ProjectsRepositorio : BaseRepositorio<Projects>, IProjectsRepository
+    public class ProjectsRepositorio : BaseRepositorio<Project>, IProjectsRepository
     {
         public ProjectsRepositorio(DesafioLlipContext context) : base(context) { }
     }

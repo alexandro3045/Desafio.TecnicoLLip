@@ -1,6 +1,6 @@
-﻿using Desafio.TecnicoLLip.Domain.Models.Base;
+﻿#region Includes
+using Desafio.TecnicoLLip.Domain.Models.Base;
 using System;
-#region Includes
 using System.ComponentModel.DataAnnotations;
 #endregion
 
@@ -21,16 +21,21 @@ namespace Desafio.TecnicoLLip.Domain.Models
 
         [Required]
         public DateTime ConclusionDate { get; set; }
+        
+        [Required]
+        public int UserId { get; set; }
+
+        [Required]
+        public Users Resposavel { get; set; }
 
         [Required]
         public int ProjectId { get; set; }
 
         [Required]
-        public Projects Projects { get; set; }
+        public Project Project { get; set; }
 
         [Required]
-        public int UserId { get; set; }
-
-        public Users Resposavel { get; set; }
+        public EnumStatus Status { get; set; }
     }
+
 }

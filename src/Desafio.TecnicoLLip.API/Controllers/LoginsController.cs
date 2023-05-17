@@ -1,15 +1,7 @@
 ﻿#region Includes
-using Desafio.TecnicoLLip.Application.Interfaces.Base;
-using Desafio.TecnicoLLip.Application.Interfaces;
-using Desafio.TecnicoLLip.Domain;
-using Desafio.TecnicoLLip.Domain.Models;
 using Desafio.TecnicoLLip.Domain.Models.Utility;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Cors;
-using Desafio.TecnicoLLip.API.Settings;
-using System.IO;
 #endregion
 
 namespace Desafio.TecnicoLLip.API.Controllers

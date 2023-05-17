@@ -5,5 +5,5 @@ using Desafio.TecnicoLLip.Domain.Models;
 
 namespace Desafio.TecnicoLLip.Domain.Core.Interfaces.Repository
 {
-    public interface IProjectsRepository : IBaseRepository<Projects> { }
+    public interface IProjectsRepository : IBaseRepository<Project> { }
 }
